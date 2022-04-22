@@ -1,0 +1,17 @@
+.main-tittle-content
+{
+    font-size: 33px;
+    font-weight: bold;
+    color: black;
+    font-family: 'Source Code Pro', 'Tahoma';
+}
+.main-img-content
+{
+    width: 70%;
+}
+p
+{
+    font-size: 16px;
+    color: black;
+    font-family: 'Source Code Pro', 'Tahoma';
+}
