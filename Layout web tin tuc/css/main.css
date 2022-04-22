@@ -15,3 +15,11 @@ p
     color: black;
     font-family: 'Source Code Pro', 'Tahoma';
 }
+.row-md-12 > ul
+{
+    list-style-type: decimal;
+}  
+.lh
+{
+    line-height: 2.5;
+}

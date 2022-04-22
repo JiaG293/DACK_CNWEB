@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="../css/menusticky.css">
     <link rel="stylesheet" href="../css/main.css">
     <script src="../js/imgmodal.js"></script>
+    <script src="../js/boxcomment.js"></script>
 </head>
 <body>
     <div class="container" class="d-inline p-2 bg-primary text-white">
@@ -131,18 +132,26 @@
                         <legend>Bình luận</legend>
                         <div class="col-md-12 for form-group">
                             <label>Tên hiển thị</label>
-                            <input type="text" placeholder="nhập tên hiển thị" class="form-control">
+                            <input type="text" id="tfUSER" placeholder="nhập tên hiển thị" class="form-control">
+                            <span id="errUSER" class="text-danger">*</span>
                         </div>
                         <div class="col-md-12">
                             <label>Nhập bình luận</label>
-                            <textarea class="form-control" style="height: 150px;"></textarea>
+                            <textarea id="tfCMT" class="form-control" style="height: 150px;"></textarea>
                         </div>
                         <div class="col-md-12">
                             <button type="button" id="bBinhLuan" class="btn btn-success center-block" >Bình Luận</button>
                         </div>
                     </fieldset>
                 </form>
-
+                <div class="row-md-12">
+                    <ul class="box-cmt" id="area-cmt">
+                        <li class="table-bordered bg-info">
+                            <div class="lh"><strong class="text-info">Admin</strong><sub><code>22/3/2022 19:58</code></sub></div>
+                            <div class="text-success" >mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm</div>
+                        </li>
+                    </ul>
+                </div>
 
                 
                 
