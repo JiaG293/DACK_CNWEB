@@ -20,6 +20,21 @@
     display: block;
     margin-top: 0;
 }
+#link-dropdown
+{
+    /* mau menu cap 2 */
+    font-weight: bold;
+    color: #337ab7;
+}
+#link-dropdown:hover
+{
+    color: red;
+}
+#dropdown-bg
+{
+    background-color: #d9edf7;
+}
+
 .dropdown .dropdown-menu > a:hover
 {
     color: red;
@@ -34,7 +49,7 @@
 {
     color: red;   
 }
-.button-menu:hover
+.button-menu:hover, #link-dropdown:hover
 {
     background-color: #eeeeee;
 }
