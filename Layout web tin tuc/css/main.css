@@ -31,14 +31,13 @@ p
 #readmore
 {
     padding: 50px;
-    
+    position: sticky;
 }
 article
 {
     border-radius: 5px;
     border: 1px solid rgb(201, 201, 201);
     margin-top: 20px;
-     
 }
 article:hover
 {
@@ -51,9 +50,10 @@ article:hover
     flex-wrap: wrap;
     position: relative;
 }
-.img-readmore
+/* .img-readmore
 {
-    width: 20%;
+    width: 220px;
+    height: 150px;
 }
 .tittle-readmore
 {
@@ -73,4 +73,44 @@ article:hover
     top: -70px;
     left: 20vw;
     color: rgb(97, 95, 95);
+} */
+.box-readmore
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
+.box-readmore > .link-readmore
+{
+    text-decoration: none;
+    width: 850px;
+}
+
+.link-readmore
+{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    color: black;
+}
+.link-readmore:hover
+{
+    color: rgb(48, 160, 235);    
+}
+.img-readmore
+{
+    width: 220px;
+    height: 150px;
+}
+.tittle-readmore
+{
+    font-size: 24px;
+    font-weight: bold;
+}
+.content-readmore
+{
+    font-size: small;
+    color: rgb(97, 95, 95);
+}
+

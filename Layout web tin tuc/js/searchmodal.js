@@ -25,6 +25,5 @@ $(document).ready(function(){
      $("#input-searchbox").val($.trim(click_text[0]));
      $("#result-searchbox").html("");
     });
-    
     $("#button-searchbox").modal("hide");
 });
