@@ -1,3 +1,7 @@
+.container
+{
+    width: 1200px;
+}
 .main-tittle-content
 {
     font-size: 33px;
@@ -22,4 +26,51 @@ p
 .lh
 {
     line-height: 2.5;
+}
+
+#learnmore
+{
+    padding: 50px;
+    
+}
+article
+{
+    border-radius: 5px;
+    border: 1px solid rgb(201, 201, 201);
+    margin-top: 20px;
+     
+}
+article:hover
+{
+    background-color: gainsboro;
+    transition: .15s ease-in;
+}
+.main-learnmore
+{
+    display: flex;  
+    flex-wrap: wrap;
+    position: relative;
+}
+.img-learnmore
+{
+    width: 20%;
+}
+.tittle-learnmore
+{
+    float: right;
+    clear: both;
+    font-size: large;
+    font-weight: bold;
+    position: absolute;
+    top: -125px;
+    left: 20vw;
+    width: 800px;
+}
+.content-learnmore
+{
+    font-size: small;
+    position: absolute;
+    top: -70px;
+    left: 20vw;
+    color: rgb(97, 95, 95);
 }
