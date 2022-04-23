@@ -2,32 +2,59 @@
 {
     width: 1200px;
 }
+.breadcrumb-item > a
+{
+    text-decoration: none;
+    font-weight: bold;
+    font-size: medium;
+}
+.breadcrumb-item > a:hover
+{
+    color: red;
+}
+
+
+/* menu */
+.link-menu
+{
+    font-weight: bold;
+
+}
+.link-menu:hover
+{
+    color: red;
+    
+}
+
+/* noi dung chinh */
 .main-tittle-content
 {
     font-size: 33px;
     font-weight: bold;
     color: black;
-    font-family: 'Source Code Pro', 'Tahoma';
+    font-family: 'Tahoma';
 }
 .main-img-content
 {
     width: 70%;
 }
-p
+/* tieu de bai bao */
+dd
 {
     font-size: 16px;
     color: black;
-    font-family: 'Source Code Pro', 'Tahoma';
+    font-family: 'Tahoma';
 }
 .row-md-12 > ul
 {
     list-style-type: decimal;
 }  
+/* phan binh luan */
 .lh
 {
     line-height: 2.5;
 }
-
+/* phan doc them */
 #readmore
 {
     padding: 50px;
@@ -74,6 +101,8 @@ article:hover
     left: 20vw;
     color: rgb(97, 95, 95);
 } */
+
+/* hop link cua phan doc them */
 .box-readmore
 {
     display: flex;
@@ -114,3 +143,65 @@ article:hover
     color: rgb(97, 95, 95);
 }
 
+
+/* footer */
+.listlink-footer > ul
+{
+    list-style-type: none;
+}
+.listlink-footer ul > li
+{
+    display: inline-block;
+    margin-right: 5px;
+}
+.link-footer 
+{
+    position: relative;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+.link-footer:hover 
+{
+    color: white;
+    text-decoration: none;
+}
+  
+.link-footer::before , .link-footer::after
+{
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 2px;
+    bottom: 10;
+    left: 0;
+    background-color: white; 
+    transform: scaleX(0);
+    transition: transform 0.4s ease;
+}
+  
+.link-footer:hover::before , .link-footer:hover::after
+{
+    transform: scaleX(1);
+}
+
+/* text ban quyen */
+.text-rgb-animation 
+{
+    font-size: 15px;
+    font-weight: bold;
+    background-image: 
+    linear-gradient(to right, rgb(221, 24, 24),rgb(245, 171, 34),rgb(223, 223, 0),rgb(1, 156, 1),rgb(0, 0, 223),rgb(105, 2, 179),rgb(226, 77, 226), rgb(226, 8, 8)); 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;  
+    animation: rgb-animation 35s linear infinite;
+}
+  
+@keyframes rgb-animation 
+{
+    to 
+    {
+        background-position: 1800vh;
+    }
+}
