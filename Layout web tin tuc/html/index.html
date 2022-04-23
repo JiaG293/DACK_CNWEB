@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="../css/main.css">
     <script src="../js/imgmodal.js"></script>
     <script src="../js/boxcomment.js"></script>
+    <script src="../js/searchmodal.js"></script>
 </head>
 <body>
     <div class="container" class="d-inline p-2 bg-primary text-white">
@@ -32,8 +33,9 @@
                         <a href=" " class="nav-item bg-info">Đăng ký&nbsp;</a> 
                         <a href="" class="nav-item bg-info">Đăng nhập</a> 
                     </p>
-                    <input type="search" class="form-inline" id="search" placeholder="../">
-                    <button type="search" id="" class="btn btn-primary">Search</button>
+                    <div class="row">
+                        <button type="button" class="btn btn-danger" id="button-searchbox">Tìm kiếm</button>
+                    </div>
                 </div>
             </div>
 
@@ -217,6 +219,25 @@
             </div>
           </div>
         </div>
-      </div>
+    </div>
+
+    <!-- Modal SearchBox -->
+    <div class="modal fade" id="modal-searchbox">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div style="text-align: center; font-weight: bold;">Tìm Kiếm</div>
+                </div>
+                <div class="modal-body">
+                    <div class="row-md-4 d-flex justify-content-center">
+                        <input type="text" name="search" id="input-searchbox" placeholder="Nhập tiêu đề bài viết" class="form-control">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <ul class="list-group" id="result-searchbox"></ul>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
