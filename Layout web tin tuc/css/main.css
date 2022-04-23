@@ -63,6 +63,22 @@
     width: 116px;
     height: 50px;
 }
+
+/* TAB menu */
+.card-tabmenu
+{
+    padding: 10px;
+}
+.card
+{
+    transition: transform .2s;
+    
+}
+.card:hover
+{
+    transform: scale(1.05);
+    background-color: #eeeeee;
+}
 /* noi dung chinh */
 .main-tittle-content
 {
