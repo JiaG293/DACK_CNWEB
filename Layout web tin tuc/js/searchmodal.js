@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    $("#button-searchbox").click(function()
+    $("#button-searchbox").mousedown(function()
     {
         $("#modal-searchbox").modal();
     });

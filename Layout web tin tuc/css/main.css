@@ -15,17 +15,25 @@
 
 
 /* menu */
-.link-menu
+.link-menu, .button-menu
 {
     font-weight: bold;
 
 }
-.link-menu:hover
+.link-menu:hover , .button-menu:hover
 {
-    color: red;
-    
+    color: red;   
 }
-
+.button-menu:hover
+{
+    background-color: #eeeeee;
+}
+.button-menu
+{
+    border: none;
+    width: 116px;
+    height: 50px;
+}
 /* noi dung chinh */
 .main-tittle-content
 {
