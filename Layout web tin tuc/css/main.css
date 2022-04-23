@@ -15,6 +15,16 @@
 
 
 /* menu */
+.dropdown:hover .dropdown-menu 
+{
+    display: block;
+    margin-top: 0;
+}
+.dropdown .dropdown-menu > a:hover
+{
+    color: red;
+}
+
 .link-menu, .button-menu
 {
     font-weight: bold;
