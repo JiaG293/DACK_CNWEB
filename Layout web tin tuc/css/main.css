@@ -28,7 +28,7 @@ p
     line-height: 2.5;
 }
 
-#learnmore
+#readmore
 {
     padding: 50px;
     
@@ -45,17 +45,17 @@ article:hover
     background-color: gainsboro;
     transition: .15s ease-in;
 }
-.main-learnmore
+.main-readmore
 {
     display: flex;  
     flex-wrap: wrap;
     position: relative;
 }
-.img-learnmore
+.img-readmore
 {
     width: 20%;
 }
-.tittle-learnmore
+.tittle-readmore
 {
     float: right;
     clear: both;
@@ -66,7 +66,7 @@ article:hover
     left: 20vw;
     width: 800px;
 }
-.content-learnmore
+.content-readmore
 {
     font-size: small;
     position: absolute;
