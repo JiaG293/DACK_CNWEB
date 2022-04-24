@@ -65,6 +65,14 @@
 }
 
 /* TAB menu */
+#menuTab
+{
+    padding: 40px;
+}
+.tab-content
+{
+    padding: 40px;
+}
 .card-tabmenu
 {
     padding: 10px;
