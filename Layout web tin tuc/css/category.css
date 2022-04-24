@@ -23,6 +23,7 @@
 .link-card
 {
     padding: 10px;
+    color: black;
 }
 .link-card:hover
 {
