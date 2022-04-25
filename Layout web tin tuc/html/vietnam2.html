@@ -17,8 +17,8 @@
     <script src="../js/searchmodal.js"></script>
     <title>Thời sự Việt Nam</title>
 
+    <script src="//raw.github.com/botmonster/jquery-bootpag/master/lib/jquery.bootpag.min.js"></script>
     <script src="../js/pagination.js"></script>
-
 </head>
 <body>
     <div class="container">
@@ -313,9 +313,11 @@
         <!-- noi dung -->
 
         <div id="main" class="row table-bordered">
-
+            
             <!-- Doc them -->
             <div id="readmore" class="col-md-12 table-bordered">
+                <h3 class="row-md-4" style="cursor: pointer; font-weight: bold;">Đọc thêm</h3>
+
                 <article class="box-readmore" >
                     <img class="img-readmore img-rounded" src="../data/ks.jpg" alt="kiem song">
                     <a href="" target="_blank" class="link-readmore">
@@ -446,23 +448,24 @@
                     </a>
                 </article >
             </div> 
+            
             <!-- Pagination -->
             <nav class="text-center" aria-label="...">
                 <ul class="pagination">
                     <li class="page-item disabled">
-                        <a id="prev-page" class="page-link" href="" tabindex="-1">Previous</a>
-                    </li>
-                    <li class="page-item active">
-                        <a class="page-link" href="../html/thoisuvietnam.html">1</a>
+                        <a class="page-link" href="#" tabindex="-1">Previous</a>
                     </li>
                     <li class="page-item">
+                        <a class="page-link" href="../html/thoisuvietnam.html">1</a>
+                    </li>
+                    <li class="page-item active">
                         <a class="page-link" href="../html/vietnam2.html">2</a>
                     </li>
                     <li class="page-item">
                         <a class="page-link" href="../html/vietnam3.html">3</a>
                     </li>
                     <li class="page-item">
-                        <a id="next-page" class="page-link" href="">Next</a>
+                        <a class="page-link" href="#">Next</a>
                     </li>
                 </ul>
             </nav>

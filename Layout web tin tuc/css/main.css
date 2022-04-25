@@ -207,7 +207,7 @@ article:hover
 }
 .link-readmore:hover
 {
-    color: rgb(48, 160, 235);    
+    color: red;  
 }
 .img-readmore
 {
