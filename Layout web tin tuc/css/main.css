@@ -212,6 +212,11 @@ article:hover
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    transition: .35s ease-in;
+}
+.box-readmore:hover
+{
+    transform: scale(1.02);
 }
 .box-readmore > .link-readmore
 {
