@@ -22,8 +22,8 @@ $(document).ready(function(){
     
     $("#result-searchbox").on("click", "li", function() {
      var click_text = $(this).text().split("|");
-     $("#input-searchbox").val($.trim(click_text[0]));
-     $("#result-searchbox").html("");
+    $("#input-searchbox").val($.trim(click_text[0]));
+    $("#result-searchbox").html("");
     });
     $("#button-searchbox").modal("hide");
 });
