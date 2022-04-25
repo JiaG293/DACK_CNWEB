@@ -37,8 +37,8 @@ $(document).ready(function(){
 
 
     /* xac thuc dang nhap */
-    var account = {name:[], password:[]};
-    var account1 = {name:[], password:[]};
+    //var account = {name:[], password:[]};
+    var account = {admin:"admin", user:"user"};
     function register()
     {
         usr = $("#username").val(); 
@@ -47,36 +47,36 @@ $(document).ready(function(){
         account["password"].push(pwr);
     }
     $("#register").click(register);
-    function login ()
+    
+    function login()
     {
         let usl = $("#username").val(); 
         let pwl = $("#password").val(); 
-
-        if(usl == account["name"])
+        let u = Object.keys(account);
+        let aus = Object.values(account);
+        let us = aus;
+        alert(aus);
+        if(usl == u.split(","))
         {
-            if(pwl == account["password"])
+            if(pwl == aus.split(","))
                 {
                     
                     $("#modal-login").modal("hide");
                     $("#text-notification").html("Đăng nhập thành công!!");
                     $("#modal-notification").modal();
-
                 }
             else
                 {
-                    
                     $("#text-notification").html("Sai mật khẩu!!");
                     $("#modal-notification").modal();
                 }
         }
         else
         {
-            
             $("#text-notification").html("Sai tài khoản!!");
             $("#modal-notification").modal();
         }
     }
-    
     $("#login").click(login);
     $("#modal-login").modal('hide');  
     
