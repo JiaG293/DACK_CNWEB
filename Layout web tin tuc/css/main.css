@@ -125,11 +125,24 @@
     transition: transform .2s;
     
 }
-.card:hover
+.card:hover 
 {
     transform: scale(1.05);
     background-color: #eeeeee;
 }
+.card-tabmenu
+{
+    text-align: center;
+}
+.card-tabmenu:hover
+{
+    text-decoration: none;
+}
+.card-body > dd:hover
+{
+    color: red;
+}
+
 /* noi dung chinh */
 .main-tittle-content
 {
