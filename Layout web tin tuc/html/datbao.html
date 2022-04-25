@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="../js/script.js"></script>
+    <script src="../js/menusticky.js"></script>
+    <link rel="stylesheet" href="../css/menusticky.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <script src="../js/imgmodal.js"></script>
+    <script src="../js/boxcomment.js"></script>
+    <script src="../js/searchmodal.js"></script>
+    <script src="../js/datbao.js"></script>
+    <title>Đặt báo cho ngày mới phơi phới</title>
+</head>
+
+<body>
+    <div class="container">
+        <div id="banner" class="row-lg-8">
+            <div id="logo" class="col-md-6">
+                <img src="../data/logo-iuh.png" alt="logo">
+            </div>
+            <div id="tool">
+                <div id="banner-tools" class="col-md-4">
+                    <img src="../data/example-slide-2.jpg" height="150px" width="350px" alt="slide">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-6">
+            <div style="margin-left: 50px;">
+                <h2>Nếu bạn muốn đặt báo.</h2>
+                <h3>Bạn muốn nhận tin tức hằng ngày.</h3>
+                <h4>Bạn không muốn mình bị trễ trong việc cập nhật tin tức.</h4>
+                <p>Thì hãy bấm vào đây.
+                    <h1>&#8595;</h1>
+                </p>
+                <div class="col-lg-12 pt-2">
+                    <button type="submit" class="btn btn-primary" id="menuDK">
+                        <span class="spinner-border spinner-border-sm"></span><h4>Đặt báo ngay nào</h4>
+                    </button>
+
+                    <h3 class="pt-4">Điều khoản quy định chính sách đặt báo:</h3>
+                    <div class="table-bordered">
+                        <p style="font-size: 16px;">&#10171; Cần nhập đầy đủ thông tin.</p>
+                        <p style="font-size: 16px;">&#10171; Không thay đổi mục đích sử dụng.</p>
+                        <p style="font-size: 16px;">&#10171; Không cung cấp thông tin cho người khác.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-6">
+            <img src="../data/tobao.jpg">
+        </div>
+    </div>
+    
+    <footer class="col-md-12 bg-primary" style="padding: 10px;">
+                <div class="col text-center listlink-footer">
+                    <ul>
+                        <li>
+                            <a class="link-footer" href="">Trang Chủ</a>
+                        </li>
+                        <li>
+                            <a class="link-footer" href="">Điều Khoản</a>
+                        </li>
+                        <li>
+                            <a class="link-footer" href="">Giới Thiệu</a>
+                        </li>
+                        <li>
+                            <a class="link-footer" href="">Đặt Báo</a>
+                        </li>
+                        <li>
+                            <a class="link-footer" href="">Sitemap</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="text-center text-rgb-animation">Bản quyền © Penguins 2022 <br><br> </div>
+            </footer>
+
+    <div class="modal" id="myModal">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Thông tin đặt báo</h2>
+                    <button type="button" class="close bg-danger" data-dismiss="modal" aria-label="Close">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form role="form">
+                        <div class="form-group">
+                            <label for="txtthanhnien" class="font-weight-bold">Đăng ký báo</label><br>
+                            <input type="checkbox" id="txtthanhnien" class="mr-1" placeholder="">Tuổi trẻ hằng ngày
+                            <input type="checkbox" id="txtthanhnien" class="mr-1" placeholder="">Tuổi trẻ cười
+                            <input type="checkbox" id="txtthanhnien" class="mr-1" placeholder="">Tuổi trẻ chủ nhật
+                        </div>
+                        <div class="form-group">
+                            <label for="txtkyhan" class="font-weight-bold">Kỳ hạn</label>
+                            <select id="txtkyhan" class="custom-select">
+                                <option  value="">3 tháng</option>
+                                <option  value="">6 tháng</option>
+                                <option  value="">1 năm</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="txtgia" class="font-weight-bold">Đơn giá</label>
+                            <input type="text" id="txtgia" class="form-control" placeholder="500000">
+                        </div>
+                        <div class="form-group">
+                            <label for="txtten" class="font-weight-bold">Thông tin liên lạc</label>
+                            <input type="text" id="txtten" class="form-control" placeholder="Mỹ Duyên">
+                            <span id="tbten" class="text-danger">*</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="txtsdt" class="font-weight-bold">Số điện thoại</label>
+                            <input type="text" id="txtsdt" class="form-control" placeholder="0983888889">
+                            <span id="tbsdt" class="text-danger">*</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="txtdiachi" class="font-weight-bold">Địa chỉ nhận báo</label>
+                            <input type="text" id="txtdiachi" class="form-control" placeholder="246 Dĩ An Bình Dương">
+                            <span id="tbdiachi" class="text-danger">*</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="txtthanhtoan" class="font-weight-bold">Hình thức thanh toán</label><br>
+                            <input type="radio" id="txtthanhtoan" class="mr-1" name="txtck">Chuyển khoản
+                            <input type="radio" id="txtthanhtoan" class="mr-1" name="txtck">Tiền mặt
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" id="btnSave" class="btn btn-primary">Đặt báo</button>
+                            <span id="thongbao" class="text-danger"></span>
+                        </div>
+                    </form>
+
+                </div>
+
+            </div>
+        </div>
+</body>
+
+</html>
