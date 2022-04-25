@@ -49,13 +49,18 @@ $(document).ready(function(){
     /* xac thuc dang nhap */
     function register()
     {
-        var usr = $("#username").val(); 
-        var pwr = $("#password]").val(); 
+        let usr = $("#username").val(); 
+        let pwr = $("#password").val(); 
         a.user = usr;
         a.password = pwr;
-        account.push(a);
-        $("#modal-login").modal("hide");
-        $("#text-notification").html("Đăng kí thành công!!");
+        let checkregis = account.concat(a);
+
+        if(!checkregis === true)
+        {
+            $("#text-notification").html("Đăng kí thành công!!");
+            $("#modal-notification").modal();
+        }
+        $("#text-notification").html("Đăng kí thất bại!!");
         $("#modal-notification").modal();
     }
     $("#regis").click(register);

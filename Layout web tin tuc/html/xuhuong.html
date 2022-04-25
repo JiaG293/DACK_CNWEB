@@ -15,10 +15,11 @@
     <script src="../js/imgmodal.js"></script>
     <script src="../js/boxcomment.js"></script>
     <script src="../js/searchmodal.js"></script>
-    <title>Thời sự Việt Nam</title>
-
     <script src="../js/pagination.js"></script>
+    <script src="../db/account.js"></script>
+    <script src="../js/login.js"></script>
 
+    <title>Xu hướng</title>
 </head>
 <body>
     <div class="container">
@@ -513,5 +514,48 @@
             </div>
         </div>
     </div>
+    
+    <!-- Modal Login -->
+    <div class="modal fade modal-dialog-centered" id="modal-login" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="text-rgb-animation" style="text-align: center; font-size: 25px; font-weight: bold;">Đăng nhập</div>
+                </div>
+                <div class="modal-body">
+                    <div class="row-md-4" >
+                        <input class="form-control" type="text" id="username" placeholder="Tài khoản" style="margin-top: 10px;">
+                        <span id="errusername" class="text-danger">(*)</span>
+                        <input  class="form-control" type="text" id="password" placeholder="Mật khẩu" style="margin-top: 10px;">
+                        <span id="errpassword" class="text-danger">(*)</span>
+                        <div class="text-center" style="margin-top: 10px;">
+                            <button class="btn btn-success" type="button" id="login">Đăng nhập</button>
+                            <button class="btn btn-success" type="button" id="regis">Đăng kí</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <span class="list-group" id="result-login"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal thong bao -->
+    <div class="modal fade modal-dialog-centered" id="modal-notification" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-md">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div style="text-align: center; font-weight: bold;">Đăng nhập</div>
+                </div>
+                <div class="modal-body">
+                    <div class="row-md-4">
+                        <div id="text-notification" class="text-center text-rgb-animation" style="font-size: 30px; font-weight: bold;"></div>
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </div>
+    
 </body>
 </html>

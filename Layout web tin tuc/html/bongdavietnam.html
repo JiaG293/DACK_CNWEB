@@ -15,10 +15,11 @@
     <script src="../js/imgmodal.js"></script>
     <script src="../js/boxcomment.js"></script>
     <script src="../js/searchmodal.js"></script>
-    <title>Thời sự Việt Nam</title>
-
     <script src="../js/pagination.js"></script>
+    <script src="../db/account.js"></script>
+    <script src="../js/login.js"></script>
 
+    <title>Bóng đá Việt Nam</title>
 </head>
 <body>
     <div class="container">
@@ -32,10 +33,9 @@
                 <div id="banner-tools" class="col-md-4">
                     <img src="../data/example-slide-2.jpg" height="150px" width="350px" alt="slide">
                 </div>
-                <div id="tool" class="col-md-4 search">
-                    <p>Hotline: 0912345678&nbsp; 
-                        <a href=" " class="nav-item bg-info">Đăng ký&nbsp;</a> 
-                        <a href="" class="nav-item bg-info">Đăng nhập</a> 
+                <div id="tool" class="col-md-4 text-right">
+                    <p class="text-rgb-animation">Hotline: 0912345678&nbsp;
+                        <button id="button-login"class="btn-primary text-rgb-animation">Đăng nhập <br> Đăng kí</button>
                     </p>
                     <!-- <div class="row">
                         <button type="button" class="btn btn-success" id="button-searchbox">Tìm kiếm</button>
@@ -513,5 +513,48 @@
             </div>
         </div>
     </div>
+    
+    <!-- Modal Login -->
+    <div class="modal fade modal-dialog-centered" id="modal-login" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="text-rgb-animation" style="text-align: center; font-size: 25px; font-weight: bold;">Đăng nhập</div>
+                </div>
+                <div class="modal-body">
+                    <div class="row-md-4" >
+                        <input class="form-control" type="text" id="username" placeholder="Tài khoản" style="margin-top: 10px;">
+                        <span id="errusername" class="text-danger">(*)</span>
+                        <input  class="form-control" type="text" id="password" placeholder="Mật khẩu" style="margin-top: 10px;">
+                        <span id="errpassword" class="text-danger">(*)</span>
+                        <div class="text-center" style="margin-top: 10px;">
+                            <button class="btn btn-success" type="button" id="login">Đăng nhập</button>
+                            <button class="btn btn-success" type="button" id="regis">Đăng kí</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <span class="list-group" id="result-login"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal thong bao -->
+    <div class="modal fade modal-dialog-centered" id="modal-notification" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-md">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div style="text-align: center; font-weight: bold;">Đăng nhập</div>
+                </div>
+                <div class="modal-body">
+                    <div class="row-md-4">
+                        <div id="text-notification" class="text-center text-rgb-animation" style="font-size: 30px; font-weight: bold;"></div>
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </div>
+    
 </body>
 </html>
