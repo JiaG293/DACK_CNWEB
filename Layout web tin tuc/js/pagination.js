@@ -23,5 +23,5 @@ $(document).click(function(){
             }   
         });
     }
-    $(mn).click(loadingList(datapagination), listOld(datalistOld));
+    $(mn).click(loadingList(datapagination));
 });
