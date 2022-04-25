@@ -16,10 +16,8 @@
     <script src="../js/imgmodal.js"></script>
     <script src="../js/boxcomment.js"></script>
     <script src="../js/searchmodal.js"></script>
-    <script src="../js/login.js"></script>
-    <script src="../db/account.js"></script>
 
-    <title>Trang chủ</title>
+    <title>Home Page</title>
 </head>
 
 <body>
@@ -34,9 +32,10 @@
                 <div id="banner-tools" class="col-md-4">
                     <img src="../data/example-slide-2.jpg" height="150px" width="350px" alt="slide">
                 </div>
-                <div id="tool" class="col-md-4 text-right">
-                    <p class="text-rgb-animation">Hotline: 0912345678&nbsp;
-                        <button id="button-login"class="btn-primary text-rgb-animation">Đăng nhập <br> Đăng kí</button>
+                <div id="tool" class="col-md-4 search">
+                    <p>Hotline: 0912345678&nbsp;
+                        <a href=" " class="nav-item bg-info">Đăng ký&nbsp;</a>
+                        <a href="" class="nav-item bg-info">Đăng nhập</a>
                     </p>
                     <!-- <div class="row">
                         <button type="button" class="btn btn-success" id="button-searchbox">Tìm kiếm</button>
@@ -52,7 +51,7 @@
                 <li class="bg-info">
                     <a class="link-menu" href="../html/home.html">Trang chủ</a>
                 </li>
-                <li class="bg-info dropdown" >
+                <li class="bg-info dropdown">
                     <a class="link-menu dropdown-toggle" href="../html/thoisu.html">Thời sự</a>
                     <ul id="dropdown-bg" class="dropdown-menu">
                         <li>
@@ -89,7 +88,7 @@
                         </li>
                     </ul>
                 </li>
-                <li class="bg-info dropdown" >
+                <li class="bg-info dropdown">
                     <a class="link-menu dropdown-toggle" href="../html/doisong.html">Đời sống</a>
                     <ul id="dropdown-bg" class="dropdown-menu">
                         <li>
@@ -136,7 +135,7 @@
                     </ul>
                 </li>
                 <li class="bg-info dropdown">
-                    <a class="link-menu dropdown-toggle" href="../html/phapluat.html">Pháp luật</a>                    
+                    <a class="link-menu dropdown-toggle" href="../html/phapluat.html">Pháp luật</a>
                     <ul id="dropdown-bg" class="dropdown-menu">
                         <li>
                             <a id="link-dropdown" href="../html/anninhtrattu.html">An ninh-trật tự</a>
@@ -146,7 +145,7 @@
                         </li>
                     </ul>
                 </li>
-                <li class="bg-info dropdown" >
+                <li class="bg-info dropdown">
                     <a class="link-menu dropdown-toggle" href="../html/giaoduc.html">Giáo dục</a>
                     <ul id="dropdown-bg" class="dropdown-menu">
                         <li>
@@ -194,7 +193,7 @@
                         </li>
                     </ul>
                 </li>
-                <li class="bg-info dropdown" >
+                <li class="bg-info dropdown">
                     <a class="link-menu dropdown-toggle" href="../html/thethao.html">Thể thao</a>
                     <ul id="dropdown-bg" class="dropdown-menu">
                         <li>
@@ -265,19 +264,35 @@
             </ul>
         </div>
         <br>
-        <div id="main" class="row table-bordered">
-            
+
+        <div id="main" class="row ">
+
+            <nav id="nav-category" class="navbar-nav row-lg-12" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item">
+                        <a href="../html/home.html">
+                            <img src="../data/home-24.png" alt="trang chu">
+                        </a>
+                    </li>
+                    <li class="breadcrumb-item">
+                        <a href="../html/congnghe.html">Trang Chủ</a>
+                    </li>
+                </ol>
+            </nav>
+
+
+
             <!-- Slide -->
             <div class="row-lg-12">
                 <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                    
+
                     <!-- Thanh phan slide -->
                     <ol class="carousel-indicators">
-                      <li data-target="#banner0" data-slide-to="0" class="active"></li>
-                      <li data-target="#banner1" data-slide-to="1"></li>
-                      <li data-target="#banner2" data-slide-to="2"></li>
+                        <li data-target="#banner0" data-slide-to="0" class="active"></li>
+                        <li data-target="#banner1" data-slide-to="1"></li>
+                        <li data-target="#banner2" data-slide-to="2"></li>
                     </ol>
-                
+
                     <!-- banner slides -->
                     <div class="carousel-inner">
                         <a href="" class="item active">
@@ -287,7 +302,7 @@
                                 <dd>Sau đám cưới, cô dâu chú rể ở Nghệ An bị kẻ gian đột nhập vào phòng tân hôn lấy trộm toàn bộ quà mừng cưới gồm 4,5 cây vàng và khoảng 900 phong bì đựng tiền mừng.</dd>
                             </div>
                         </a>
-                
+
                         <a href="" class="item">
                             <img src="../data/congtrinh.jpg" alt="cong tinh" style="width: 100%; height: 600px;">
                             <div class="carousel-caption d-none d-md-block">
@@ -295,7 +310,7 @@
                                 <dd>Sau dự án trang trí cầu Đại An bị chê trách vì hơi 'kỳ quái' và thi công khi chưa được cấp phép, mới đây, thêm một dự án trang trí khác ở TP.Đông Hà (Quảng Trị) lại ngang nhiên xây dựng khi chưa được cấp phép.</dd>
                             </div>
                         </a>
-                    
+
                         <a href="" class="item">
                             <img src="../data/duoinuoc.png" alt="duoi nuoc" style="width: 100%; height: 600px;">
                             <div class="carousel-caption d-none d-md-block">
@@ -304,21 +319,29 @@
                             </div>
                         </a>
                     </div>
-                
+
                     <!-- Nut dieu khien slide -->
                     <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-                      <span class="glyphicon glyphicon-chevron-left"></span>
-                      <span class="sr-only">Previous</span>
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                        <span class="sr-only">Previous</span>
                     </a>
                     <a class="right carousel-control" href="#myCarousel" data-slide="next">
-                      <span class="glyphicon glyphicon-chevron-right"></span>
-                      <span class="sr-only">Next</span>
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                        <span class="sr-only">Next</span>
                     </a>
-                  </div>
+                </div>
             </div>
             <!-- content -->
-            <div class="row">
+
+
+            <div class="row table-bordered">
                 <div class="col-sm-8">
+                    <div class="col-md-12">
+                        <h3>
+                            <img src="../data/bx-category.svg" alt="chi muc">
+                            <a class="link-category" href="">Tin tức</a>
+                        </h3>
+                    </div>
                     <div id="readmore" class="col-md-12 table-bordered">
 
                         <article>
@@ -353,16 +376,16 @@
                                 </div>
                             </a>
                         </article>
-                        
-                         <article>
+
+                        <article>
                             <a href="https://vnexpress.net/tau-do-bo-phat-hien-dong-dat-manh-nhat-tren-sao-hoa-4455275.html " target="_blank">
-                                <img class="card-img-top " src="../data/hoathach.jpg " width="100% " height="300px " alt="Card image cap ">
+                                <img class="card-img-top " src="../data/saohoa.jpg " width="100% " height="300px " alt="Card image cap ">
                                 <div class="card-body ">
                                     <dd style="font-size: 20px; " class="card-text "><b>&#10171;Tàu đổ bộ phát hiện động đất mạnh nhất trên sao Hỏa</b></dd>
                                 </div>
                             </a>
                         </article>
-                        
+
                     </div>
 
                 </div>
@@ -379,11 +402,11 @@
                             <a class="nav-link" id="profile-tab" data-toggle="tab" href="#moicapnhat" role="tab" aria-controls="profile" aria-selected="false">Mới cập nhật</a>
                         </li>
                     </ul>
-                  
+
                     <!-- Menu tab pane -->
                     <div class="tab-content">
                         <div class="tab-pane active" id="docnhieu" role="tabpanel" aria-labelledby="home-tab">
-                            
+
                             <a class="card-tabmenu " href=" " target="_blank ">
                                 <div class="card table-bordered " style="width: 300px; ">
                                     <img class="card-img-top " src="../data/npt.jpg " style="width: 100%; " alt="Card image cap ">
@@ -439,9 +462,9 @@
                             </a>
 
                         </div>
-                    <div class="tab-pane" id="moicapnhat" role="tabpanel" aria-labelledby="profile-tab">
-                        
-                        <a class="card-tabmenu " href=" " target="_blank ">
+                        <div class="tab-pane" id="moicapnhat" role="tabpanel" aria-labelledby="profile-tab">
+
+                            <a class="card-tabmenu " href=" " target="_blank ">
                                 <div class="card table-bordered " style="width: 300px; ">
                                     <img class="card-img-top " src="../data/npt.jpg " style="width: 100%; " alt="Card image cap ">
                                     <div class="card-body ">
@@ -467,136 +490,148 @@
                                     </div>
                                 </div>
                             </a>
-                        
-                    </div>
-                </div>
-            </div>
-            <footer class="col-md-12 bg-primary" style="padding: 10px;">
-                <div class="col text-center listlink-footer">
-                    <ul>
-                        <li>
-                            <a class="link-footer" href="../html/home.html">Trang Chủ</a>
-                        </li>
-                        <li>
-                            <a class="link-footer" href="../html/dieukhoan.html">Điều Khoản</a>
-                        </li>
-                        <li>
-                            <a class="link-footer" href="../html/gioithieu.html">Giới Thiệu</a>
-                        </li>
-                        <li>
-                            <a class="link-footer" href="../html/datbao.html">Đặt Báo</a>
-                        </li>
-                        <li>
-                            <a class="link-footer" href="../html/sitemap.html">Sitemap</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="text-center text-rgb-animation">Bản quyền © Penguins 2022 <br><br> </div>
-            </footer>
 
-            <!-- Modal SearchBox -->
-            <div class="modal fade modal-dialog-centered" id="modal-searchbox" tabindex="-1" role="dialog" aria-hidden="true">
-                <div class="modal-dialog modal-lg">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <div style="text-align: center; font-weight: bold;">Tìm Kiếm</div>
-                        </div>
-                        <div class="modal-body">
-                            <div class="row-md-4 d-flex justify-content-center">
-                                <input type="text" name="search" id="input-searchbox" placeholder="Nhập tiêu đề bài viết" class="form-control">
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                            <ul class="list-group" id="result-searchbox"></ul>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <!-- Modal Login -->
-            <div class="modal fade modal-dialog-centered" id="modal-login" tabindex="-1" role="dialog" aria-hidden="true">
-                <div class="modal-dialog modal-sm">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <div class="text-rgb-animation" style="text-align: center; font-size: 25px; font-weight: bold;">Đăng nhập</div>
-                        </div>
-                        <div class="modal-body">
-                            <div class="row-md-4" >
-                                <input class="form-control" type="text" id="username" placeholder="Tài khoản" style="margin-top: 10px;">
-                                <span id="errusername" class="text-danger">(*)</span>
-                                <input  class="form-control" type="text" id="password" placeholder="Mật khẩu" style="margin-top: 10px;">
-                                <span id="errpassword" class="text-danger">(*)</span>
-                                <div class="text-center" style="margin-top: 10px;">
-                                    <button class="btn btn-success" type="button" id="login">Đăng nhập</button>
-                                    <button class="btn btn-success" type="button" id="regis">Đăng kí</button>
+            <div class=" d-flex flex-column" style="min-height: 100vh;">
+                <div id="main" class="row table-bordered">
+                    <div class="col-md-12">
+                        <h3>
+                            <img src="../data/bx-category.svg" alt="chi muc">
+                            <a class="link-category" href="../html/congnghe.html">Công nghệ</a>
+                        </h3>
+                    </div>
+                    <div class="col-md-12 thoisu-flexbox">
+                        <a href="" class="link-card">
+                            <div class="card mb-3 card-box img-rounded">
+                                <img class="card-img-top img-rounded" src="../data/congtrinh.jpg" alt="Card image cap" height="150px" width="150px">
+                                <div class="card-body">
+                                    <h5 class="card-title" style="font-size: large;">Quảng Trị: Công trình trang trí cổng chào đèn led chưa được cấp phép vẫn thi công</h5>
+                                    <dd class="card-text"><small class="text-muted">Last updated 3 mins ago</small></dd>
                                 </div>
                             </div>
-                        </div>
-                        <div class="modal-footer">
-                            <span class="list-group" id="result-login"></span>
-                        </div>
+                        </a>
+                        <a href="" class="link-card">
+                            <div class="card mb-3 card-box img-rounded">
+                                <img class="card-img-top img-rounded" src="../data/congtrinh.jpg" alt="Card image cap" height="150px" width="150px">
+                                <div class="card-body">
+                                    <h5 class="card-title" style="font-size: large;">Quảng Trị: Công trình trang trí cổng chào đèn led chưa được cấp phép vẫn thi công</h5>
+                                    <dd class="card-text"><small class="text-muted">Last updated 3 mins ago</small></dd>
+                                </div>
+                            </div>
+                        </a>
+
+                        <p><a href="../html/congnghe.html">&#10171; xem thêm.</a></p>
+
+                    </div>
+
+                    <div class="col-md-12">
+                        <h3>
+                            <img src="../data/bx-category.svg" alt="chi muc">
+                            <a class="link-category" href="../html/doisong.html">Đời sống</a>
+                        </h3>
+                    </div>
+                    <div class="col-md-12 thoisu-flexbox">
+                        <a href="" class="link-card">
+                            <div class="card mb-3 card-box img-rounded">
+                                <img class="card-img-top img-rounded" src="../data/congtrinh.jpg" alt="Card image cap" height="150px" width="150px">
+                                <div class="card-body">
+                                    <h5 class="card-title" style="font-size: large;">Quảng Trị: Công trình trang trí cổng chào đèn led chưa được cấp phép vẫn thi công</h5>
+                                    <dd class="card-text"><small class="text-muted">Last updated 3 mins ago</small></dd>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="" class="link-card">
+                            <div class="card mb-3 card-box img-rounded">
+                                <img class="card-img-top img-rounded" src="../data/congtrinh.jpg" alt="Card image cap" height="150px" width="150px">
+                                <div class="card-body">
+                                    <h5 class="card-title" style="font-size: large;">Quảng Trị: Công trình trang trí cổng chào đèn led chưa được cấp phép vẫn thi công</h5>
+                                    <dd class="card-text"><small class="text-muted">Last updated 3 mins ago</small></dd>
+                                </div>
+                            </div>
+                        </a>
+
+                        <p><a href="../html/doisong.html">&#10171; xem thêm.</a></p>
+
+                    </div>
+
+                    <div class="col-md-12">
+                        <h3>
+                            <img src="../data/bx-category.svg" alt="chi muc">
+                            <a class="link-category" href="../html/giaoduc.html">Giáo dục</a>
+                        </h3>
+                    </div>
+                    <div class="col-md-12 thoisu-flexbox">
+                        <a href="" class="link-card">
+                            <div class="card mb-3 card-box img-rounded">
+                                <img class="card-img-top img-rounded" src="../data/congtrinh.jpg" alt="Card image cap" height="150px" width="150px">
+                                <div class="card-body">
+                                    <h5 class="card-title" style="font-size: large;">Quảng Trị: Công trình trang trí cổng chào đèn led chưa được cấp phép vẫn thi công</h5>
+                                    <dd class="card-text"><small class="text-muted">Last updated 3 mins ago</small></dd>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="" class="link-card">
+                            <div class="card mb-3 card-box img-rounded">
+                                <img class="card-img-top img-rounded" src="../data/congtrinh.jpg" alt="Card image cap" height="150px" width="150px">
+                                <div class="card-body">
+                                    <h5 class="card-title" style="font-size: large;">Quảng Trị: Công trình trang trí cổng chào đèn led chưa được cấp phép vẫn thi công</h5>
+                                    <dd class="card-text"><small class="text-muted">Last updated 3 mins ago</small></dd>
+                                </div>
+                            </div>
+                        </a>
+
+                        <p><a href="../html/giaoduc.html">&#10171; xem thêm.</a></p>
+
                     </div>
                 </div>
             </div>
 
-            <!-- Modal thong bao -->
-            <div class="modal fade modal-dialog-centered" id="modal-notification" tabindex="-1" role="dialog" aria-hidden="true">
-                <div class="modal-dialog modal-md">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <div style="text-align: center; font-weight: bold;">Đăng nhập</div>
+        </div>
+        <footer class="col-md-12 bg-primary" style="padding: 10px;">
+            <div class="col text-center listlink-footer">
+                <ul>
+                    <li>
+                        <a class="link-footer" href="../html/home.html">Trang Chủ</a>
+                    </li>
+                    <li>
+                        <a class="link-footer" href="../html/dieukhoan.html">Điều Khoản</a>
+                    </li>
+                    <li>
+                        <a class="link-footer" href="../html/gioithieu.html">Giới Thiệu</a>
+                    </li>
+                    <li>
+                        <a class="link-footer" href="../html/datbao.html">Đặt Báo</a>
+                    </li>
+                    <li>
+                        <a class="link-footer" href="../html/sitemap.html">Sitemap</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="text-center text-rgb-animation">Bản quyền © Penguins 2022 <br><br> </div>
+        </footer>
+
+        <!-- Modal SearchBox -->
+        <div class="modal fade modal-dialog-centered" id="modal-searchbox" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <div style="text-align: center; font-weight: bold;">Tìm Kiếm</div>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row-md-4 d-flex justify-content-center">
+                            <input type="text" name="search" id="input-searchbox" placeholder="Nhập tiêu đề bài viết" class="form-control">
                         </div>
-                        <div class="modal-body">
-                            <div class="row-md-4">
-                                <div id="text-notification" class="text-center text-rgb-animation" style="font-size: 30px; font-weight: bold;"></div>
-                            </div>
-                        </div> 
+                    </div>
+                    <div class="modal-footer">
+                        <ul class="list-group" id="result-searchbox"></ul>
                     </div>
                 </div>
             </div>
-    
-            <!-- Modal Login -->
-            <div class="modal fade modal-dialog-centered" id="modal-login" tabindex="-1" role="dialog" aria-hidden="true">
-                <div class="modal-dialog modal-sm">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <div class="text-rgb-animation" style="text-align: center; font-size: 25px; font-weight: bold;">Đăng nhập</div>
-                        </div>
-                        <div class="modal-body">
-                            <div class="row-md-4" >
-                                <input class="form-control" type="text" id="username" placeholder="Tài khoản" style="margin-top: 10px;">
-                                <span id="errusername" class="text-danger">(*)</span>
-                                <input  class="form-control" type="text" id="password" placeholder="Mật khẩu" style="margin-top: 10px;">
-                                <span id="errpassword" class="text-danger">(*)</span>
-                                <div class="text-center" style="margin-top: 10px;">
-                                    <button class="btn btn-success" type="button" id="login">Đăng nhập</button>
-                                    <button class="btn btn-success" type="button" id="regis">Đăng kí</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                            <span class="list-group" id="result-login"></span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        
-            <!-- Modal thong bao -->
-            <div class="modal fade modal-dialog-centered" id="modal-notification" tabindex="-1" role="dialog" aria-hidden="true">
-                <div class="modal-dialog modal-md">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <div style="text-align: center; font-weight: bold;">Đăng nhập</div>
-                        </div>
-                        <div class="modal-body">
-                            <div class="row-md-4">
-                                <div id="text-notification" class="text-center text-rgb-animation" style="font-size: 30px; font-weight: bold;"></div>
-                            </div>
-                        </div> 
-                    </div>
-                </div>
-            </div>
-            
+        </div>
 </body>
 
 </html>
