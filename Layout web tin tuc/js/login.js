@@ -37,13 +37,13 @@ $(document).ready(function(){
 
 
     /* xac thuc dang nhap */
-    var account = {name:["admin"], password:["admin"]};
-    
+    var account = {name:[], password:[]};
+    var account1 = {name:[], password:[]};
     function register()
     {
         usr = $("#username").val(); 
         pwr = $("#password]").val(); 
-        account["name"].push(user);
+        account["name"].push(usr);
         account["password"].push(pwr);
     }
     $("#register").click(register);

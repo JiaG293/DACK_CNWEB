@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+            <html>
+
+            <head>
+
+                <meta name="viewport" content="width=device-width, initial-scale=1">
+                <meta charset="utf-8" />
+                <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+                <link rel="stylesheet" href="css/Screen1.css">
+                <script type = "text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+                <script type = "text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.2.8/jquery.form-validator.min.js"></script>
+
+             <script src="../js/authentication.js"></script>
+            enter code here
+                <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+            </head>
+
+
+            <body>
+                <div data-role="page" id="">
+                    <div data-role="header" class="ui-bar-a ui-page-theme-a ui-bar-inherit">
+                        <h1>Login</h1>
+                    </div>
+                    <div data-role="main" class="ui-content">
+
+                    <form id="UserLogin" class="ui-body ui-corner-all" data-ajax="false" method="get" action="HomePage.html"> 
+                        <div data-role="fieldcontain">
+                            <input type="text" name="username" placeholder="Email address" id="username" value=""/>
+                        </div>  
+                        <div data-role="fieldcontain">
+                            <input type="password" name="password" placeholder="Password" id="password" value="" />
+                        </div>
+                        <input type="submit" class="ui-btn ui-btn-inline ui-corner-all ui-shadow" name="submit" id="submit" value="Log In"/>
+
+                        <!-- <a href="HomePage.html" class="ui-btn ui-btn-inline ui-corner-all ui-shadow" id="submit" data-ajax="false">Submit</a> -->
+                        <a href="Register.html" class="ui-btn ui-btn-inline ui-corner-all ui-shadow ">Register</a>
+                    </form> 
+                    </div>
+                    <div data-role="footer" class="ui-bar-a ui-page-theme-a ui-bar-inherit" data-position="fixed">
+                        <h6>2016</h6>
+                    </div>
+                </div>
+
+
+            </body>
+
+            </html>
