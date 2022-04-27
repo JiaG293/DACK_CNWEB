@@ -25,6 +25,11 @@
     padding: 10px;
     color: black;
 }
+.link-card:focus
+{
+    text-decoration: none;
+    color: red;
+}
 .link-card:hover
 {
     text-decoration: none;
