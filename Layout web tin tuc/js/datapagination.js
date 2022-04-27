@@ -1,4 +1,4 @@
-let l1 = {id:"1", tag: "", tittle: "", img:"../data/", link: "", content: "T" };
+let l1 = {id:"1", tag: "quocte", tittle: "hfghfhfgdfgdgdggh", img:"../data/", link: "hfghfgdfgdh", content: "Thfhfhhfgh" };
 let l2 = {id:"2", tag: "", tittle: " ", img:"../data/c", link: "", content: "" };
 let l3 = {id:"3", tag: "", tittle: "", img:"../data/", link: "", content: "" };
 let l4 = {id:"4", tag: "", tittle: "", img:"../data/", link: "", content: "" };
