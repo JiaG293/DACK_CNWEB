@@ -21,6 +21,9 @@
     <script src="../js/boxcomment.js"></script>
     <script src="../js/searchmodal.js"></script>
     <script src="../js/datbao.js"></script>
+    <script src="../db/account.js"></script>
+    <script src="../js/login.js"></script>
+
     <title>Đặt báo cho ngày mới phơi phới</title>
 </head>
 
@@ -28,7 +31,9 @@
     <div class="container">
         <div id="banner" class="row-lg-8">
             <div id="logo" class="col-md-6">
-                <img src="../data/logo-iuh.png" alt="logo">
+                <a href="../html/home.html">
+                    <img src="../data/logo-iuh.png" alt="logo">
+                </a>
             </div>
             <div id="tool">
                 <div id="banner-tools" class="col-md-4">
@@ -41,16 +46,19 @@
     <div class="row">
         <div class="col-lg-6">
             <div style="margin-left: 50px;">
-                <h2>Nếu bạn muốn đặt báo.</h2>
-                <h3>Bạn muốn nhận tin tức hằng ngày.</h3>
-                <h4>Bạn không muốn mình bị trễ trong việc cập nhật tin tức.</h4>
-                <p>Thì hãy bấm vào đây.
-                    <h1>&#8595;</h1>
-                </p>
+                <div style="margin-left: 15px;">
+                    <h2>Nếu bạn muốn đặt báo.</h2>
+                    <h3>Bạn muốn nhận tin tức hằng ngày.</h3>
+                    <h4>Bạn không muốn mình bị trễ trong việc cập nhật tin tức.</h4>
+                </div>
+                <p class="beware">Thì hãy bấm vào đây.
+                    <h1 id="beware" class="beware">&#8595;</h1>
+                </p><br><br><br><br>
                 <div class="col-lg-12 pt-2">
                     <button type="submit" class="btn btn-primary" id="menuDK">
                         <span class="spinner-border spinner-border-sm"></span><h4>Đặt báo ngay nào</h4>
                     </button>
+                    
 
                     <h3 class="pt-4">Điều khoản quy định chính sách đặt báo:</h3>
                     <div class="table-bordered">
@@ -90,6 +98,7 @@
                 <div class="text-center text-rgb-animation">Bản quyền © Penguins 2022 <br><br> </div>
             </footer>
 
+            <!-- Modal dat bao -->
     <div class="modal" id="myModal">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">

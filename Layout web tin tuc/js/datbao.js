@@ -67,6 +67,5 @@ $(document).ready(function() {
         $("table tbody").append(them);
         $("#myModal").modal("hide");
         return true;
-
     })
 })

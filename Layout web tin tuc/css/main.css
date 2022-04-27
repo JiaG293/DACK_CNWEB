@@ -332,3 +332,33 @@ footer
         background-position: 1800vh;
     }
 }
+
+/* Button dat bao  */
+#menuDK
+{
+    position: relative;
+    transition: .15s ease-in;
+    transform: scale(1);
+}
+#menuDK:hover
+{
+    transform: scale(1.1);
+}
+#beware
+{
+    margin-left: 70px;
+    padding-top: 10px;
+}
+.beware
+{
+    margin-left: 30px;
+    position: absolute;
+    animation: beware-text .50s linear 2s infinite alternate;
+}
+@keyframes beware-text {
+    0%   {top: 100px; color: red;}
+    25% {top: 95px;}
+    50% {top: 90px;}
+    50% {top: 95px; color: red;}
+    100% {top: 100px;}
+  }
