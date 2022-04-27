@@ -1,0 +1,69 @@
+/* Flexbox chi muc viet nam */
+
+.thoisu-flexbox
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+.card-box
+{
+    width: 200px;
+    height: 250px;
+}
+/* hinh anh card size */
+.card-box > img
+{
+    width: 200px;
+    height: 120px;
+}
+/* link box card*/
+.link-card
+{
+    padding: 10px;
+    color: black;
+}
+.link-card:focus
+{
+    text-decoration: none;
+    color: red;
+}
+.link-card:hover
+{
+    text-decoration: none;
+    color: red;
+}
+/* link chi muc */
+.link-category
+{
+    transition: .55s ease;
+    position: relative;
+}
+.link-category:hover
+{
+    text-decoration: none;
+    color: red;
+}
+.link-category::after
+{
+    content: "Đọc thêm";
+    font-size: medium;
+    font-weight: bold;
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    background-color: red; 
+    transform: scaleX(0);
+    padding-top: 5px;
+    transition: transform 0.4s ease;
+    
+}
+.link-category:hover::after
+{
+    transform: scale(1.1);  
+}
+
