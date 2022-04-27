@@ -273,6 +273,11 @@ footer
     position: relative;
     bottom: -400px;
 } 
+.link-footer:focus
+{
+    text-decoration: none;
+    color: red;
+}
 .listlink-footer > ul
 {
     list-style-type: none;
