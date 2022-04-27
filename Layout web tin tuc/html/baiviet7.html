@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="../js/datapagination.js"></script>
+    <script src="../js/menusticky.js"></script>
+    <link rel="stylesheet" href="../css/menusticky.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <script src="../js/imgmodal.js"></script>
+    <script src="../js/boxcomment.js"></script>
+    <script src="../js/searchmodal.js"></script>
+    <script src="../js/pagination.js"></script>
+    <script src="../db/account.js"></script>
+    <script src="../js/login.js"></script>
+
+    <title>Nga nói kiểm soát toàn bộ vùng Kherson, đưa ra cảnh báo Anh</title>
+</head>
+<body>
+    <div class="container">
+        <div id="banner" class="row-lg-8">
+            <div id="logo" class="col-md-4">
+                <a href="../html/home.html">
+                    <img src="../data/logo-iuh.png" alt="logo">
+                </a>
+            </div>
+            <div id="tool">
+                <div id="banner-tools" class="col-md-4">
+                    <img src="../data/example-slide-2.jpg" height="150px" width="350px" alt="slide">
+                </div>
+                <div id="tool" class="col-md-4 text-right">
+                    <p class="text-rgb-animation">Hotline: 0912345678&nbsp;
+                        <button id="button-login"class="btn-primary text-rgb-animation">Đăng nhập <br> Đăng kí</button>
+                    </p>
+                    <!-- <div class="row">
+                        <button type="button" class="btn btn-success" id="button-searchbox">Tìm kiếm</button>
+                    </div> -->
+                </div>
+            </div>
+
+        </div>
+
+        
+        <!-- menu dinh tren -->
+        <div id="menusticky" class="row">
+            <ul class="nav navbar-nav">
+                <li class="bg-info">
+                    <a class="link-menu" href="../html/home.html">Trang chủ</a>
+                </li>
+                <li class="bg-info dropdown" >
+                    <a class="link-menu dropdown-toggle" href="../html/thoisu.html">Thời sự</a>
+                    <ul id="dropdown-bg" class="dropdown-menu">
+                        <li>
+                            <a id="link-dropdown" href="../html/thoisuvietnam.html">Việt Nam</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/thoisuquocte.html">Quốc tế</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/phongsudieutra.html">Phóng sự điều tra</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/covid19.html">Covid-19</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/chongtingia.html">Chống tin giả</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="bg-info dropdown">
+                    <a class="link-menu dropdown-toggle" href="../html/kinhte.html">Kinh tế</a>
+                    <ul id="dropdown-bg" class="dropdown-menu">
+                        <li>
+                            <a id="link-dropdown" href="../html/kinhtexanh.html">Kinh tế xanh</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/chungkhoan.html">Chứng khoán</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/doanhnghiep.html">Doanh nghiệp</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/tieudung.html">Tiêu dùng</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="bg-info dropdown" >
+                    <a class="link-menu dropdown-toggle" href="../html/doisong.html">Đời sống</a>
+                    <ul id="dropdown-bg" class="dropdown-menu">
+                        <li>
+                            <a id="link-dropdown" href="../html/giadinh.html">Gia đình</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/amthuc.html">Ẩm thực</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/dulich.html">Du lịch</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/congdong.html">Cộng đồng</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/tinhyeuhonnhan.html">Tình yêu-hôn nhân</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="bg-info dropdown">
+                    <a class="link-menu dropdown-toggle" href="../html/congnghe.html">Công nghệ</a>
+                    <ul id="dropdown-bg" class="dropdown-menu">
+                        <li>
+                            <a id="link-dropdown" href="../html/sanphammoi.html">Sản phẩm mới</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/thuthuatmeohay.html">Thủ thuật-mẹo hay</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/congnghe24h.html">Công nghệ 24h</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/reviewsanpham.html">Review sản phẩm</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/xuhuong.html">Xu hướng</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/phanmem.html">Phần mềm</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/phancung.html">Phần cứng</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="bg-info dropdown">
+                    <a class="link-menu dropdown-toggle" href="../html/phapluat.html">Pháp luật</a>                    
+                    <ul id="dropdown-bg" class="dropdown-menu">
+                        <li>
+                            <a id="link-dropdown" href="../html/anninhtrattu.html">An ninh-trật tự</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/hinhsudansu.html">Hình sự-dân sự</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="bg-info dropdown" >
+                    <a class="link-menu dropdown-toggle" href="../html/giaoduc.html">Giáo dục</a>
+                    <ul id="dropdown-bg" class="dropdown-menu">
+                        <li>
+                            <a id="link-dropdown" href="../html/tuyensinh.html">Tuyển sinh</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/duhoc.html">Du học</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/tuvanchonnghe.html">Tư vấn chọn nghề</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/tracuudiem.html">Tra cứu điểm</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="bg-info dropdown">
+                    <a class="link-menu dropdown-toggle" href="../html/suckhoe.html">Sức khỏe</a>
+                    <ul id="dropdown-bg" class="dropdown-menu">
+                        <li>
+                            <a id="link-dropdown" href="../html/lamdep.html">Làm đẹp</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/khoedepmoingay.html">Khỏe đẹp mỗi ngày</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/bacsionline.html">Bác sĩ online</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="bg-info dropdown">
+                    <a class="link-menu dropdown-toggle" href="../html/giaitri.html">Giải trí</a>
+                    <ul id="dropdown-bg" class="dropdown-menu">
+                        <li>
+                            <a id="link-dropdown" href="../html/phimdienanh.html">Phim điện ảnh</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/truyenhinh.html">Truyền hình</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/amnhac.html">Âm nhạc</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/showbiz.html">Showbiz</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="bg-info dropdown" >
+                    <a class="link-menu dropdown-toggle" href="../html/thethao.html">Thể thao</a>
+                    <ul id="dropdown-bg" class="dropdown-menu">
+                        <li>
+                            <a id="link-dropdown" href="../html/bongdavietnam.html">Bóng đá Việt Nam</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/bongdaquocte.html">Bóng đá quốc tế</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/bongro.html">Bóng rổ</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/bongchuyen.html">Bóng chuyền</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/bongbauduc.html">Bóng bầu dục</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="bongban.html">Bóng bàn</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/quanvot.html">Quần vợt</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/ketquatrandau.html">Kết quả trận đấu</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/seagames.html">SEA games</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/tinchuyennhuong.html">Tin chuyển nhượng</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="bg-info dropdown">
+                    <a class="link-menu dropdown-toggle" href="../html/kinhdoanh.html">Kinh doanh</a>
+                    <ul id="dropdown-bg" class="dropdown-menu">
+                        <li>
+                            <a id="link-dropdown" href="../html/lamgiau.html">Làm giàu</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/doanhnhan.html">Doanh nhân</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="bitcoinnft.html">Bitcoin-NFT</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="bg-info dropdown">
+                    <a class="link-menu dropdown-toggle" href="../html/bandoc.html">Bạn đọc</a>
+                    <ul id="dropdown-bg" class="dropdown-menu">
+                        <li>
+                            <a id="link-dropdown" href="../html/hoidap.html">Hỏi đáp</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/tamlongvang.html">Tấm lòng vàng</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/thaoluanvande.html">Thảo luận vấn đề</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="bg-info">
+                    <button class="button-menu bg-info text-info" id="button-searchbox">Tìm kiếm 
+                        <img src="../data/search-24.png" alt="search" style="width: 20px;">
+                    </button>
+                </li>
+            </ul>
+        </div>
+        <br>
+        <div id="path" class="row-lg-12">
+            <!-- OLD -->
+            <!-- <ul class="nav navbar-nav"> 
+                <li class="nav-item">
+                    <a href="" class="nav-link">
+                        <img src="../data/home-24.png" alt="home">
+                        <img src="../data/arrow-24.png" alt="arrow">
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="" class="nav-link">
+                        <span class="text-success">Thời sự</span>
+                        <img src="../data/arrow-24.png" alt="arrow">
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="" class="nav-link">
+                        <span class="text-success">Trong nước</span>
+                        <img src="../data/arrow-24.png" alt="arrow">
+                    </a>
+                </li>
+            </ul> -->
+
+
+            <!-- NEW-->
+            <br>
+            <nav id="nav-category" class="navbar-nav row-lg-12" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item">
+                        <a href="../html/home.html">
+                            <img src="../data/home-24.png" alt="trang chu">
+                        </a>
+                    </li>
+                    <li class="breadcrumb-item">
+                        <a href="../html/thoisu.html">Thời sự</a>
+                    </li>
+                    <li class="breadcrumb-item">
+                        <a href="../html/thoisuquocte.html">Quốc tế</a>
+                    </li>
+                    <li class="breadcrumb-item active nav-item" aria-current="page">
+                        <a class="nav-link" href="../html/baiviet7.html">Nga nói kiểm soát toàn bộ vùng Kherson, đưa ra cảnh báo Anh</a>
+                    </li>
+                </ol>
+            </nav>
+            
+        <!-- Menu tab -->
+        
+
+        <!-- noi dung -->
+
+        <div id="main" class="row table-bordered">
+            <div id="tittle" class="col-md-12">
+                <span class="main-tittle-content row">Nga nói kiểm soát toàn bộ vùng Kherson, đưa ra cảnh báo Anh</span>
+            </div>
+            <div id="content" class="col-md-12">
+                <div class="col-md-12" id="addcontent">
+                    <dd>
+                        Rạng sáng 27.4, Bộ Quốc phòng Nga tuyên bố Nga đã kiểm soát toàn bộ tỉnh Kherson ở miền nam Ukraine, đồng thời chỉ định người đứng đầu thủ phủ vùng này.
+                    </dd>
+                    <br>
+                    <div class="text-center">
+                        <iframe width="850" height="480" src="https://thanhnien.mediacdn.vn/325084952045817856/2022/4/27/nga-kiem-soat-vung-kherson-canh-bao-anh-1651033464479145527773.mp4"></iframe>
+                    </div>  
+                    <br> 
+                    <dd>
+                        Trước đó, ngày 25.4, quân đội Nga chính thức tiếp quản tòa nhà của hội đồng thành phố Kherson. Cờ của Ukraine bị hạ xuống. Thị trưởng và nhân viên của tòa thị chính được phép về nhà.
+                    </dd>
+                    <br>
+                    <dd>
+                        Reuters dẫn lời ông Gennady Laguta, Thống đốc tỉnh Kherson, báo tin trên Telegram rằng lực lượng Nga đã chỉ định tân thị trưởng cho thành phố.
+                    </dd>
+                    <br>
+                    <dd>
+                        Tuần trước, người phát ngôn Bộ Quốc phòng Ukraine Olexandr Motuzyanyk cảnh báo Nga đang chuẩn bị tổ chức “cuộc trưng cầu dân ý” tại Kherson liên quan đến khả năng sáp nhập vùng này vào Nga như Crimea.
+                    </dd>
+                    <br>
+                    <dd>
+                        Tổng thống Ukraine Volodymyr Zelensky tuyên bố Kyiv sẽ rút khỏi nỗ lực đàm phán hòa bình với Moscow nếu lực lượng Nga tổ chức các cuộc trưng cầu dân ý tương tự tại những khu vực mà quân Nga kiểm soát.
+                    </dd>
+                    <br>
+                    <figure class="text-center imgmodal">
+                        <img class="main-img-content img-thumbnail" src="../data/baiviet7-1.jpg" alt="1">
+                        <figcaption>Kherson Ukraine</figcaption>
+                    </figure>
+                    <br>
+                    <dd>
+                        Bộ Quốc phòng Nga ngày 26.4 cảnh báo với Anh rằng nếu nước này tiếp tục “khích lệ Ukraine tấn công các mục tiêu ở Nga” thì sẽ có “sự đáp trả tương ứng” tức thì, theo Reuters. Bộ Quốc phòng Nga còn nói rằng những cuộc tấn công đáp trả của Nga sẽ không gây ra vấn đề nếu đại diện của một nước phương Tây nào đó bị xác định có mặt tại các trung tâm đưa ra quyết sách của Ukraine.
+                    </dd>
+                    <br><br><br>
+                </div>
+            </div>
+
+            <!-- Binh luan -->
+            <div id="comment" class="col-md-12 table-bordered">
+                <form action="">
+                    <fieldset >
+                        <legend>Bình luận</legend>
+                        <div class="col-md-12 for form-group">
+                            <label>Tên hiển thị</label>
+                            <input type="text" id="tfUSER" placeholder="nhập tên hiển thị" class="form-control">
+                            <span id="errUSER" class="text-danger">*</span>
+                        </div>
+                        <div class="col-md-12">
+                            <label>Nhập bình luận</label>
+                            <textarea id="tfCMT" class="form-control" style="height: 150px;"></textarea>
+                        </div>
+                        <div class="col-md-12">
+                            <button type="button" id="bBinhLuan" class="btn btn-success center-block" >Bình Luận</button>
+                        </div>
+                    </fieldset>
+                </form>
+                <div class="row-md-12">
+                    <ul class="box-cmt" id="area-cmt">
+                         <!-- Form binh luan cu -->
+                        <!-- <li class="table-bordered bg-info">
+                            <div class="lh"><strong class="text-info">Admin</strong><sub><code>22/3/2022 19:58</code></sub></div>
+                            <span class="text-success">test</span>
+                        </li> -->
+
+                        <!-- Form binh luan moi -->
+                        <li class="table-bordered bg-info">
+                            
+                            <div class="media">
+                                <div class="media-left">
+                                    <img src="../data/user-64.png" class="media-object" style="width:60px">
+                                </div>
+                                <div class="media-body">
+                                    <h4 class="media-heading text-info"><strong>user</strong></strong><sub><code>22/3/2022 19:58</code></sub></h4>
+                                    <dd class="text-success" style="font-size: small;">test</dd>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    
+                </div>  
+            </div>
+            
+            <!-- Doc them -->
+            <div id="readmore" class="col-md-12 table-bordered">
+                <h3 class="row-md-4" style="cursor: pointer; font-weight: bold;">Đọc thêm</h3>
+
+                <article class="box-readmore" >
+                    <img class="img-readmore img-rounded" src="../data/ks.jpg" alt="kiem song">
+                    <a href="" target="_blank" class="link-readmore">
+                        
+                        
+                        <div class="tittle-readmore">Kiếm sống 'vô hình': 'Ngưỡng sinh tồn' chạm đáy</div>
+                        <div class="content-readmore">'Tôi hà tiện lắm, đi chợ chỉ mua những món ăn rẻ, ăn được lâu ngày. Ví dụ, mua cá 20.000 đồng/kg tôi sẽ không mua, 15.000 đồng/kg thì được; trái dưa hấu hay khóm cũng vậy, chênh nhau 5.000 đồng là tôi khựng lại ngay', bà Xuân nói.</div>
+                        
+                    </a>
+                </article >
+                <article class="box-readmore" >
+                    <img class="img-readmore img-rounded" src="../data/khoito.jpg" alt="khoi to">
+                    <a href="" target="_blank" class="link-readmore">
+                        
+                        
+                        <div class="tittle-readmore">Sóc Trăng: Bắt Hồ Hữu Phúc, kẻ giả nhà sư, nhận nuôi nhiều trẻ mồ côi rồi hành hung</div>
+                        <div class="content-readmore">Công an TP.Sóc Trăng (Sóc Trăng) đã bắt tạm giam Hồ Hữu Phúc để điều tra về hành vi giả nhà sư, hành hung nhiều trẻ mồ côi và trẻ có hoàn cảnh khó khăn.</div>
+                       
+                    </a>
+                </article >
+                <article class="box-readmore" >
+                    <img class="img-readmore img-rounded" src="../data/antrom.jpg" alt="an trom">
+                    <a href="" target="_blank"  class="link-readmore">
+                        
+                        
+                        <div class="tittle-readmore">Kẻ gian đột nhập phòng tân hôn, trộm 4,5 lượng vàng và 900 phong bì mừng cưới</div>
+                        <div class="content-readmore">Sau đám cưới, cô dâu chú rể ở Nghệ An bị kẻ gian đột nhập vào phòng tân hôn lấy trộm toàn bộ quà mừng cưới gồm 4,5 cây vàng và khoảng 900 phong bì đựng tiền mừng.</div>
+                        
+                    </a>
+                </article >
+                <article class="box-readmore" >
+                    <img class="img-readmore img-rounded" src="../data/hanglau.jpg" alt="hang lau">
+                    <a href="" target="_blank" class="link-readmore">
+                        
+                        <div class="tittle-readmore">Nam Định: Tiêu hủy hơn 4.000 sản phẩm không rõ nguồn gốc, xuất xứ</div>
+                        <div class="content-readmore">Hơn 4.000 sản phẩm không rõ nguồn gốc xuất xứ thuộc 21 chủng loại hàng hóa như vật tư y tế, hoá mỹ phẩm, thực phẩm chức năng, đồ gia dụng... bị cơ quan chức năng tiêu hủy.</div>
+                        
+                    </a>
+                </article >
+                <article class="box-readmore" >
+                    <img class="img-readmore img-rounded" src="../data/duoinuoc.png" alt="duoi nuoc">
+                    <a href="" target="_blank" class="link-readmore">
+                        
+                        <div class="tittle-readmore">Thanh Hóa: 2 bé trai bị đuối nước trên sông Mã</div>
+                        <div class="content-readmore">2 bé trai 4 và 8 tuổi ra sông Mã, đoạn qua phố Đại Đồng (TT.Phong Sơn, H.Cẩm Thủy, Thanh Hóa) chơi thì bị đuối nước. Lực lượng chức năng mới tìm thấy thi thể 1 nạn nhân.</div>
+                        
+                    </a>
+                </article >
+                <article class="box-readmore" >
+                    <img class="img-readmore img-rounded" src="../data/congtrinh.jpg" alt="cong trinh">
+                    <a href="" target="_blank" class="link-readmore">
+                        
+                        <div class="tittle-readmore">Quảng Trị: Công trình trang trí cổng chào đèn led chưa được cấp phép vẫn thi công</div>
+                        <div class="content-readmore">Sau dự án trang trí cầu Đại An bị chê trách vì hơi 'kỳ quái' và thi công khi chưa được cấp phép, mới đây, thêm một dự án trang trí khác ở TP.Đông Hà (Quảng Trị) lại ngang nhiên xây dựng khi chưa được cấp phép.</div>
+                        
+                    </a>
+                </article >
+                <article class="box-readmore" >
+                    <img class="img-readmore img-rounded" src="../data/xuphat.jpg" alt="xu phat">
+                    <a href="" target="_blank" class="link-readmore">
+                        
+                        <div class="tittle-readmore">TP.HCM: Trở về sau cuộc nhậu, bị Tổ 363 xử phạt hơn 8 triệu đồng</div>
+                        <div class="content-readmore">Đêm 22 rạng sáng 23.4, Tổ 363 của Công an TP.HCM tuần tra, trấn áp tội phạm trên nhiều tuyến đường tại Q.Tân Phú, Q.Tân Bình... (TP.HCM).</div>
+                       
+                    </a>
+                </article >
+                <article class="box-readmore" >
+                    <img class="img-readmore img-rounded" src="../data/tang vat.jpg" alt="tang vat">
+                    <a href="" target="_blank" class="link-readmore">
+                        
+                        <div class="tittle-readmore">Bình Dương: Nổ súng bắt 2 nghi phạm vận chuyển ma túy, mang theo súng quân dụng</div>
+                        <div class="content-readmore">Ngày 23.4, Công an TX. Bến Cát (Bình Dương) cho biết đã phối hợp bắt giữ 2 nghi phạm vận chuyển số lượng lớn ma túy, gần 1.000 viên thuốc lắc và mang theo súng quân dụng.</div>
+                        
+                    </a>
+                </article >
+                <article class="box-readmore" >
+                    <img class="img-readmore img-rounded" src="../data/pharung.jpg" alt="pha rung">
+                    <a href="" target="_blank" class="link-readmore">
+                        
+                        <div class="tittle-readmore">Lâm Đồng 4 năm thiệt hại hơn 204 ha rừng</div>
+                        <div class="content-readmore">Từ năm 2018 đến hết quý 1/2022, các cơ quan chức năng tỉnh Lâm Đồng đã phát hiện và lập hồ sơ xử lý 2.856 vụ vi phạm các quy định về quản lý, bảo vệ rừng. Diện tích rừng thiệt hại hơn 204 ha. </div>
+                        
+                    </a>
+                </article >
+                <article class="box-readmore" >
+                    <img class="img-readmore img-rounded" src="../data/thoitiet.png" alt="thoi tiet">
+                    <a href="" target="_blank" class="link-readmore">
+                        
+                        <div class="tittle-readmore">Nắng nóng tăng nhiệt ở Bắc bộ và Trung bộ, tia UV nguy hại ở TP.HCM</div>
+                        <div class="content-readmore">Dự báo thời tiết hôm nay 22.4.2022: nhiệt độ nắng nóng gia tăng ở các tỉnh Bắc bộ và Trung bộ, trong khi đó tại khu vực TP.HCM và Đắc Lắk tiếp tục có chỉ số tia UV ở mức độ nguy hại đến sức khỏe.</div>
+                        
+                    </a>
+                </article >
+                <article class="box-readmore" >
+                    <img class="img-readmore img-rounded" src="../data/laodong.jpg" alt="lao dong">
+                    <a href="" target="_blank" class="link-readmore">
+                        
+                        <div class="tittle-readmore">Chương trình lao động nông nghiệp tại Úc chưa triển khai đã phải cảnh báo lừa đảo</div>
+                        <div class="content-readmore">Mặc dù Chương trình lao động nông nghiệp tại Úc vẫn đang đàm phán về cách thức triển khai, song tại một số địa phương xuất hiện các cá nhân, tổ chức mời chào người lao động đi Úc với mức chi phí cao.</div>
+                        
+                    </a>
+                </article >
+                <article class="box-readmore" >
+                    <img class="img-readmore img-rounded" src="../data/luadao.png" alt="luadao">
+                    <a href="" target="_blank" class="link-readmore">
+                        
+                        <div class="tittle-readmore">Lập Facebook giả 'máy bay bà già' lừa tuyển 'phi công trẻ' với giá 20 triệu đồng</div>
+                        <div class="content-readmore">Quốc, Huy lập Facebook giả làm “máy bay bà già” cần tuyển “phi công trẻ” cho bản thân và môi giới cho nhiều phụ nữ lớn tuổi. Cả hai ra giá từ 10 - 20 triệu đồng, để lừa đảo, chiếm đoạt tiền môi giới 1 - 1,5 triệu đồng của trai trẻ.</div>
+                       
+                    </a>
+                </article >
+                <article class="box-readmore" >
+                    <img class="img-readmore img-rounded" src="../data/doingoai.jpg" alt="doi ngoai">
+                    <a href="" target="_blank" class="link-readmore">
+                        
+                        <div class="tittle-readmore">Mỹ tổ chức đối thoại quốc phòng về nhu cầu phòng thủ Ukraine</div>
+                        <div class="content-readmore">Cuộc đối thoại với các đồng minh tại Đức do Mỹ chủ trì được cho là nhằm thúc đẩy Berlin viện trợ vũ khí nhiều hơn cho Ukraine.</div>
+                       
+                    </a>
+                </article >
+                <article class="box-readmore" >
+                    <img class="img-readmore img-rounded" src="../data/thachthuc.jpg" alt="thach thuc">
+                    <a href="" target="_blank" class="link-readmore">
+                        
+                        <div class="tittle-readmore">Thách thức bủa vây Tổng thống Biden</div>
+                        <div class="content-readmore">Chính quyền Tổng thống Mỹ Joe Biden đối diện sức ép lớn từ đảng Cộng hòa trước cuộc bầu cử giữa kỳ vào tháng 11 tới.</div>
+                        
+                    </a>
+                </article >             
+            </div>  
+            <!-- Pagination -->
+            <nav class="text-center" aria-label="...">
+                <ul class="pagination">
+                    <li class="page-item">
+                        <a id="morenew" class="page-link" style="cursor: pointer;" >Thêm nữa</a>
+                    </li>
+                </ul>
+            </nav>   
+        </div>
+    
+        
+        <!-- footer -->
+        <footer class="bg-primary" style="padding: 10px;">
+            <div class="col text-center listlink-footer">
+                <ul>
+                    <li>
+                        <a class="link-footer" href="../html/home.html">Trang Chủ</a>
+                    </li>
+                    <li>
+                        <a class="link-footer" href="../html/dieukhoan.html">Điều Khoản</a>
+                    </li>
+                    <li>
+                        <a class="link-footer" href="../html/gioithieu.html">Giới Thiệu</a>
+                    </li>
+                    <li>
+                        <a class="link-footer" href="../html/datbao.html">Đặt Báo</a>
+                    </li>
+                    <li>
+                        <a class="link-footer" href="../html/sitemap.html">Sitemap</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="text-center text-rgb-animation">Bản quyền © Penguins 2022<br><br></div>
+        </footer>
+    </div>
+
+    
+    
+    <!-- Modal IMG -->
+    <div class="modal fade modal-dialog-centered" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">              
+            <div class="modal-body">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+              <img src="" class="imagepreview" style="width: 100%;" >
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <!-- Modal SearchBox -->
+    <div class="modal fade modal-dialog-centered" id="modal-searchbox" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div style="text-align: center; font-weight: bold;">Tìm Kiếm</div>
+                </div>
+                <div class="modal-body">
+                    <div class="row-md-4 d-flex justify-content-center">
+                        <input type="text" name="search" id="input-searchbox" placeholder="Nhập tiêu đề bài viết" class="form-control">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <ul class="list-group" id="result-searchbox"></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal Login -->
+    <div class="modal fade modal-dialog-centered" id="modal-login" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="text-rgb-animation" style="text-align: center; font-size: 25px; font-weight: bold;">Đăng nhập</div>
+                </div>
+                <div class="modal-body">
+                    <div class="row-md-4" >
+                        <input class="form-control" type="text" id="username" placeholder="Tài khoản" style="margin-top: 10px;">
+                        <span id="errusername" class="text-danger">(*)</span>
+                        <input  class="form-control" type="text" id="password" placeholder="Mật khẩu" style="margin-top: 10px;">
+                        <span id="errpassword" class="text-danger">(*)</span>
+                        <div class="text-center" style="margin-top: 10px;">
+                            <button class="btn btn-success" type="button" id="login">Đăng nhập</button>
+                            <button class="btn btn-success" type="button" id="regis">Đăng kí</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <span class="list-group" id="result-login"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal thong bao -->
+    <div class="modal fade modal-dialog-centered" id="modal-notification" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-md">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div style="text-align: center; font-weight: bold;">Đăng nhập</div>
+                </div>
+                <div class="modal-body">
+                    <div class="row-md-4">
+                        <div id="text-notification" class="text-center text-rgb-animation" style="font-size: 30px; font-weight: bold;"></div>
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

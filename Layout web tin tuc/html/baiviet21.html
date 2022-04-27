@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="../js/datapagination.js"></script>
+    <script src="../js/menusticky.js"></script>
+    <link rel="stylesheet" href="../css/menusticky.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <script src="../js/imgmodal.js"></script>
+    <script src="../js/boxcomment.js"></script>
+    <script src="../js/searchmodal.js"></script>
+    <script src="../js/pagination.js"></script>
+    <script src="../db/account.js"></script>
+    <script src="../js/login.js"></script>
+
+    <title>Fenerbahçe gia hạn hợp đồng với chuyền 2 huyền thoại của Iran</title>
+</head>
+<body>
+    <div class="container">
+        <div id="banner" class="row-lg-8">
+            <div id="logo" class="col-md-4">
+                <a href="../html/home.html">
+                    <img src="../data/logo-iuh.png" alt="logo">
+                </a>
+            </div>
+            <div id="tool">
+                <div id="banner-tools" class="col-md-4">
+                    <img src="../data/example-slide-2.jpg" height="150px" width="350px" alt="slide">
+                </div>
+                <div id="tool" class="col-md-4 text-right">
+                    <p class="text-rgb-animation">Hotline: 0912345678&nbsp;
+                        <button id="button-login"class="btn-primary text-rgb-animation">Đăng nhập <br> Đăng kí</button>
+                    </p>
+                    <!-- <div class="row">
+                        <button type="button" class="btn btn-success" id="button-searchbox">Tìm kiếm</button>
+                    </div> -->
+                </div>
+            </div>
+
+        </div>
+
+        
+        <!-- menu dinh tren -->
+        <div id="menusticky" class="row">
+            <ul class="nav navbar-nav">
+                <li class="bg-info">
+                    <a class="link-menu" href="../html/home.html">Trang chủ</a>
+                </li>
+                <li class="bg-info dropdown" >
+                    <a class="link-menu dropdown-toggle" href="../html/thoisu.html">Thời sự</a>
+                    <ul id="dropdown-bg" class="dropdown-menu">
+                        <li>
+                            <a id="link-dropdown" href="../html/thoisuvietnam.html">Việt Nam</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/thoisuquocte.html">Quốc tế</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/phongsudieutra.html">Phóng sự điều tra</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/covid19.html">Covid-19</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/chongtingia.html">Chống tin giả</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="bg-info dropdown">
+                    <a class="link-menu dropdown-toggle" href="../html/kinhte.html">Kinh tế</a>
+                    <ul id="dropdown-bg" class="dropdown-menu">
+                        <li>
+                            <a id="link-dropdown" href="../html/kinhtexanh.html">Kinh tế xanh</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/chungkhoan.html">Chứng khoán</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/doanhnghiep.html">Doanh nghiệp</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/tieudung.html">Tiêu dùng</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="bg-info dropdown" >
+                    <a class="link-menu dropdown-toggle" href="../html/doisong.html">Đời sống</a>
+                    <ul id="dropdown-bg" class="dropdown-menu">
+                        <li>
+                            <a id="link-dropdown" href="../html/giadinh.html">Gia đình</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/amthuc.html">Ẩm thực</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/dulich.html">Du lịch</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/congdong.html">Cộng đồng</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/tinhyeuhonnhan.html">Tình yêu-hôn nhân</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="bg-info dropdown">
+                    <a class="link-menu dropdown-toggle" href="../html/congnghe.html">Công nghệ</a>
+                    <ul id="dropdown-bg" class="dropdown-menu">
+                        <li>
+                            <a id="link-dropdown" href="../html/sanphammoi.html">Sản phẩm mới</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/thuthuatmeohay.html">Thủ thuật-mẹo hay</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/congnghe24h.html">Công nghệ 24h</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/reviewsanpham.html">Review sản phẩm</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/xuhuong.html">Xu hướng</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/phanmem.html">Phần mềm</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/phancung.html">Phần cứng</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="bg-info dropdown">
+                    <a class="link-menu dropdown-toggle" href="../html/phapluat.html">Pháp luật</a>                    
+                    <ul id="dropdown-bg" class="dropdown-menu">
+                        <li>
+                            <a id="link-dropdown" href="../html/anninhtrattu.html">An ninh-trật tự</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/hinhsudansu.html">Hình sự-dân sự</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="bg-info dropdown" >
+                    <a class="link-menu dropdown-toggle" href="../html/giaoduc.html">Giáo dục</a>
+                    <ul id="dropdown-bg" class="dropdown-menu">
+                        <li>
+                            <a id="link-dropdown" href="../html/tuyensinh.html">Tuyển sinh</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/duhoc.html">Du học</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/tuvanchonnghe.html">Tư vấn chọn nghề</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/tracuudiem.html">Tra cứu điểm</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="bg-info dropdown">
+                    <a class="link-menu dropdown-toggle" href="../html/suckhoe.html">Sức khỏe</a>
+                    <ul id="dropdown-bg" class="dropdown-menu">
+                        <li>
+                            <a id="link-dropdown" href="../html/lamdep.html">Làm đẹp</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/khoedepmoingay.html">Khỏe đẹp mỗi ngày</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/bacsionline.html">Bác sĩ online</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="bg-info dropdown">
+                    <a class="link-menu dropdown-toggle" href="../html/giaitri.html">Giải trí</a>
+                    <ul id="dropdown-bg" class="dropdown-menu">
+                        <li>
+                            <a id="link-dropdown" href="../html/phimdienanh.html">Phim điện ảnh</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/truyenhinh.html">Truyền hình</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/amnhac.html">Âm nhạc</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/showbiz.html">Showbiz</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="bg-info dropdown" >
+                    <a class="link-menu dropdown-toggle" href="../html/thethao.html">Thể thao</a>
+                    <ul id="dropdown-bg" class="dropdown-menu">
+                        <li>
+                            <a id="link-dropdown" href="../html/bongdavietnam.html">Bóng đá Việt Nam</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/bongdaquocte.html">Bóng đá quốc tế</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/bongro.html">Bóng rổ</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/bongchuyen.html">Bóng chuyền</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/bongbauduc.html">Bóng bầu dục</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="bongban.html">Bóng bàn</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/quanvot.html">Quần vợt</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/ketquatrandau.html">Kết quả trận đấu</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/seagames.html">SEA games</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/tinchuyennhuong.html">Tin chuyển nhượng</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="bg-info dropdown">
+                    <a class="link-menu dropdown-toggle" href="../html/kinhdoanh.html">Kinh doanh</a>
+                    <ul id="dropdown-bg" class="dropdown-menu">
+                        <li>
+                            <a id="link-dropdown" href="../html/lamgiau.html">Làm giàu</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/doanhnhan.html">Doanh nhân</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="bitcoinnft.html">Bitcoin-NFT</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="bg-info dropdown">
+                    <a class="link-menu dropdown-toggle" href="../html/bandoc.html">Bạn đọc</a>
+                    <ul id="dropdown-bg" class="dropdown-menu">
+                        <li>
+                            <a id="link-dropdown" href="../html/hoidap.html">Hỏi đáp</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/tamlongvang.html">Tấm lòng vàng</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/thaoluanvande.html">Thảo luận vấn đề</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="bg-info">
+                    <button class="button-menu bg-info text-info" id="button-searchbox">Tìm kiếm 
+                        <img src="../data/search-24.png" alt="search" style="width: 20px;">
+                    </button>
+                </li>
+            </ul>
+        </div>
+        <br>
+        <div id="path" class="row-lg-12">
+            <!-- OLD -->
+            <!-- <ul class="nav navbar-nav"> 
+                <li class="nav-item">
+                    <a href="" class="nav-link">
+                        <img src="../data/home-24.png" alt="home">
+                        <img src="../data/arrow-24.png" alt="arrow">
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="" class="nav-link">
+                        <span class="text-success">Thời sự</span>
+                        <img src="../data/arrow-24.png" alt="arrow">
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="" class="nav-link">
+                        <span class="text-success">Trong nước</span>
+                        <img src="../data/arrow-24.png" alt="arrow">
+                    </a>
+                </li>
+            </ul> -->
+
+
+            <!-- NEW-->
+            <br>
+            <nav id="nav-category" class="navbar-nav row-lg-12" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item">
+                        <a href="../html/home.html">
+                            <img src="../data/home-24.png" alt="trang chu">
+                        </a>
+                    </li>
+                    <li class="breadcrumb-item">
+                        <a href="../html/thethao.html">Thể thao</a>
+                    </li>
+                    <li class="breadcrumb-item">
+                        <a href="../html/bongchuyen.html">Bóng chuyền</a>
+                    </li>
+                    <li class="breadcrumb-item active nav-item" aria-current="page">
+                        <a class="nav-link" href="../html/baiviet21.html">Fenerbahçe gia hạn hợp đồng với chuyền 2 huyền thoại của Iran</a>
+                    </li>
+                </ol>
+            </nav>
+            
+        <!-- Menu tab -->
+        
+
+        <!-- noi dung -->
+
+        <div id="main" class="row table-bordered">
+            <div id="tittle" class="col-md-12">
+                <span class="main-tittle-content row">Fenerbahçe gia hạn hợp đồng với chuyền 2 huyền thoại của Iran</span>
+            </div>
+            <div id="content" class="col-md-12">
+                <div class="col-md-12" id="addcontent">
+                    <dd>
+                        <b>
+                            Hài lòng với màn trình diễn của Saeid Marouf, CLB Fenerbahçe S.K đã giữ chân chuyền hai người Iran bằng một bản hợp đồng mới.
+                        </b>
+                    </dd>
+                    <br>
+                    <dd>
+                        Sau khi kết thúc Olympic Tokyo 2020, Saeid Marouf đã trải qua một thời gian 6 tháng không thi đấu. Chuyền hai người Iran ký hợp đồng với CLB Bắc Kinh, nhưng do giải đấu liên tục bị trì hoãn bởi dịch COVID-19, Marouf phải tìm kiếm một bến đỗ khác và anh đã gia nhập Fenerbahçe.S.K vào tháng 1 năm nay.                    </dd>
+                    <br>
+                    <dd>
+                        Phong độ của Marouf được cho là đã thuyết phục được ban lãnh đạo của Fenerbahçe ký vào một bản hợp đồng mới. Nguồn tin từ tehrantimes cho biết, Fenerbahçe đã gia hạn thành công với chuyền hai hàng đầu thế giới, thuyết phục anh thi đấu tại giải vô địch quốc gia Thổ Nhĩ Kỳ thêm một mùa giải nữa.                    </dd>
+                    <br>
+                    <figure class="text-center imgmodal">
+                        <img class="main-img-content img-thumbnail" src="../data/baiviet21-1.jpg" alt="1">
+                        <figcaption>Saeid Marouf sẽ thi đấu cho Fenerbahçe thêm một mùa giải nữa</figcaption>
+                    </figure>
+                    <br>
+                    <dd>
+                        Chuyền hai sinh năm 1985 là một huyền thoại của bóng chuyền Iran, đã khoác áo đội tuyển quốc gia suốt 16 năm. Trong sự nghiệp quốc tế của mình, Saeid Marouf giành được 9 huy chương với bóng chuyền Iran, 6 trong số đó là huy chương Vàng (2 HCV Vô địch châu Á, 2 HCV ASIAD, 2 HCV Asian Cup).                    </dd>
+                    <br>
+                    <figure class="text-center imgmodal">
+                        <img class="main-img-content img-thumbnail" src="../data/baiviet21-2.jpg" alt="2">
+                        <figcaption>Chuyền hai người Iran mong muốn rời ĐTQG sau Olympic 2020</figcaption>
+                    </figure>
+                    <br>
+                    <dd>
+                        Đã bày tỏ mong muốn chia tay đội tuyển quốc gia Iran để tập trung thi đấu ở cấp độ CLB và giành thời gian còn lại cho gia đình. Tuy nhiên, Liên đoàn bóng chuyền Iran (IRIVF)  vẫn muốn triệu tập Saeid Marouf nhằm chuẩn bị cho các giải đấu lớn trong năm 2022 như ASIAD hay giải Vô địch Thế giới.
+                    </dd>
+                    <br><br><br>
+                </div>
+            </div>
+
+            <!-- Binh luan -->
+            <div id="comment" class="col-md-12 table-bordered">
+                <form action="">
+                    <fieldset >
+                        <legend>Bình luận</legend>
+                        <div class="col-md-12 for form-group">
+                            <label>Tên hiển thị</label>
+                            <input type="text" id="tfUSER" placeholder="nhập tên hiển thị" class="form-control">
+                            <span id="errUSER" class="text-danger">*</span>
+                        </div>
+                        <div class="col-md-12">
+                            <label>Nhập bình luận</label>
+                            <textarea id="tfCMT" class="form-control" style="height: 150px;"></textarea>
+                        </div>
+                        <div class="col-md-12">
+                            <button type="button" id="bBinhLuan" class="btn btn-success center-block" >Bình Luận</button>
+                        </div>
+                    </fieldset>
+                </form>
+                <div class="row-md-12">
+                    <ul class="box-cmt" id="area-cmt">
+                         <!-- Form binh luan cu -->
+                        <!-- <li class="table-bordered bg-info">
+                            <div class="lh"><strong class="text-info">Admin</strong><sub><code>22/3/2022 19:58</code></sub></div>
+                            <span class="text-success">test</span>
+                        </li> -->
+
+                        <!-- Form binh luan moi -->
+                        <li class="table-bordered bg-info">
+                            
+                            <div class="media">
+                                <div class="media-left">
+                                    <img src="../data/user-64.png" class="media-object" style="width:60px">
+                                </div>
+                                <div class="media-body">
+                                    <h4 class="media-heading text-info"><strong>user</strong></strong><sub><code>22/3/2022 19:58</code></sub></h4>
+                                    <dd class="text-success" style="font-size: small;">test</dd>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    
+                </div>  
+            </div>
+            
+            <!-- Doc them -->
+            <div id="readmore" class="col-md-12 table-bordered">
+                <h3 class="row-md-4" style="cursor: pointer; font-weight: bold;">Đọc thêm</h3>
+
+                <article class="box-readmore" >
+                    <img class="img-readmore img-rounded" src="../data/bongchuyen1.jpg" alt="bong chuyen 1">
+                    <a href="" target="_blank" class="link-readmore">
+                        
+                        
+                        <div class="tittle-readmore">Giải bóng chuyền nữ CLB Châu Á: Diamond Food thắng nhọc Kashan</div>
+                        <div class="content-readmore">Đại diện của Thái Lan đã có một chiến thắng 3-0 khá khó khăn trước Kashan tại lượt thi đấu thứ 3 giải bóng chuyền nữ CLB Châu Á 2022.</div>
+                        
+                    </a>
+                </article >
+                <article class="box-readmore" >
+                    <img class="img-readmore img-rounded" src="../data/bongchuyen2.jpeg" alt="bong chuyen 2">
+                    <a href="" target="_blank" class="link-readmore">
+                        
+                        
+                        <div class="tittle-readmore">Bóng chuyền Malaysia tìm kiếm sự hồi sinh từ bước đà SEA Games 31</div>
+                        <div class="content-readmore">Sau khi vắng mặt tại kỳ SEA Games 2019 trên đất Philippines, Malaysia đã quyết định đưa 2 đội tuyển bóng chuyền nam/nữ trở lại kỳ Đại hội lần này, họ hy vọng đây là cột mốc chứng kiến sự hồi sinh của bộ môn này.</div>
+                       
+                    </a>
+                </article >
+                <article class="box-readmore" >
+                    <img class="img-readmore img-rounded" src="../data/bongchuyen3.jpg" alt="bong chuyen 3">
+                    <a href="" target="_blank"  class="link-readmore">
+                        
+                        
+                        <div class="tittle-readmore">Giải bóng chuyền nữ CLB Châu Á: Kashan và Altay có chiến thắng dễ dàng</div>
+                        <div class="content-readmore">Đại diện của Iran là Kashan và ĐKVĐ Altay đã có chiến thắng dễ dàng trước Jizzakh State và Kyrgyzstan trong lượt trận thứ 2 giải bóng chuyền nữ CLB Châu Á 2022.</div>
+                        
+                    </a>
+                </article >
+                <article class="box-readmore" >
+                    <img class="img-readmore img-rounded" src="../data/bongchuyen4.jpg" alt="bong chuyen 4">
+                    <a href="" target="_blank" class="link-readmore">
+                        
+                        <div class="tittle-readmore">Khởi tranh giải bóng chuyền nam các đội mạnh phía nam lần I-2022 Cúp Mai Linh Group</div>
+                        <div class="content-readmore">Giải bóng chuyền nam các đội mạnh phía nam Cúp Mai Linh Group có sự góp mặt của 6 đội phía nam: TP HCM, Bình Dương, Long An, Bến Tre, Vĩnh Long Công an TP HCM.</div>
+                        
+                    </a>
+                </article >
+                <article class="box-readmore" >
+                    <img class="img-readmore img-rounded" src="../data/bongchuyen5.jpeg" alt="bong chuyen 5">
+                    <a href="" target="_blank" class="link-readmore">
+                        
+                        <div class="tittle-readmore">Bóng chuyền nữ Indonesia đặt mục tiêu vượt mặt Thái Lan và Việt Nam tại SEA Games 31</div>
+                        <div class="content-readmore">Ít giờ sau tuyên bố sẽ tham dự SEA Games 31, đội tuyển bóng chuyền nữ Indonesia đặt mục tiêu vượt mặt Thái Lan và Việt Nam để giành tấm huy chương Vàng.</div>
+                        
+                    </a>
+                </article >
+                <article class="box-readmore" >
+                    <img class="img-readmore img-rounded" src="../data/bongchuyen6.jpg" alt="bong chuyen 6">
+                    <a href="" target="_blank" class="link-readmore">
+                        
+                        <div class="tittle-readmore">Giải bóng chuyền VĐQG Trung Quốc lại hoãn vì COVID-19</div>
+                        <div class="content-readmore">Lần thứ hai ở mùa giải năm nay, Hiệp hội Bóng chuyền Trung Quốc buộc phải lùi ngày tổ chức giải đấu Super League do đất nước này vẫn theo đuổi chiến lược "Zero Covid".</div>
+                        
+                    </a>
+                </article >
+                <article class="box-readmore" >
+                    <img class="img-readmore img-rounded" src="../data/bongchuyen7.jpg" alt="bong chuyen 7">
+                    <a href="" target="_blank" class="link-readmore">
+                        
+                        <div class="tittle-readmore">Đội trưởng huyền thoại chia tay bóng chuyền Ba Lan</div>
+                        <div class="content-readmore">Đội trưởng đội bóng chuyền nam Ba Lan - Michał Kubiak đã chính thức tuyên bố rút khỏi đội tuyển quốc gia. sau 11 năm cống hiến.</div>
+                       
+                    </a>
+                </article >
+                <article class="box-readmore" >
+                    <img class="img-readmore img-rounded" src="../data/bongchuyen8.jpeg" alt="bong chuyen 8">
+                    <a href="" target="_blank" class="link-readmore">
+                        
+                        <div class="tittle-readmore">Liên đoàn bóng chuyền Nga yêu cầu FIVB bồi thường số tiền khổng lồ</div>
+                        <div class="content-readmore">Việc bị FIVB đơn phương chấm dứt quyền đăng cai giải bóng chuyền nam Vô địch thế giới 2022, phía Liên đoàn bóng chuyền Nga cho biết bị tổn hại nặng nề và yêu cầu FIVB phải bồi thường.</div>
+                        
+                    </a>
+                </article >
+                <article class="box-readmore" >
+                    <img class="img-readmore img-rounded" src="../data/bongchuyen9.jpeg" alt="bong chuyen 9">
+                    <a href="" target="_blank" class="link-readmore">
+                        
+                        <div class="tittle-readmore">Bóng chuyền Philippines tập huấn tại 3 quốc gia, sẵn sàng giành Vàng SEA Games 31</div>
+                        <div class="content-readmore">Với mục tiêu giành ít nhất 1 tấm HCV tại SEA Games 31, bóng chuyền Philippines đã có sự chuẩn bị kỹ lưỡng với những chuyến tập huấn tại nước ngoài.</div>
+                        
+                    </a>
+                </article >
+                <article class="box-readmore" >
+                    <img class="img-readmore img-rounded" src="../data/bongchuyen10.jpeg" alt="bong chuyen 10">
+                    <a href="" target="_blank" class="link-readmore">
+                        
+                        <div class="tittle-readmore">Bóng chuyền Việt Nam tham dự 2/10 giải châu Á trong năm 2022</div>
+                        <div class="content-readmore">Trong năm 2022 bóng chuyền Việt Nam sẽ tham dự 2 giải châu Á là giải U19 nữ trong tháng 7 và giải nữ vô địch châu Á diễn ra vào tháng 8.</div>
+                        
+                    </a>
+                </article >
+                <article class="box-readmore" >
+                    <img class="img-readmore img-rounded" src="../data/bongchuyen11.jpeg" alt="bong chuyen 11">
+                    <a href="" target="_blank" class="link-readmore">
+                        
+                        <div class="tittle-readmore">Bốc thăm giải bóng chuyền nữ Vô địch thế giới 2022: 2 bảng tử thần xuất hiện</div>
+                        <div class="content-readmore">Việc thay đổi cơ cấu chia bảng đấu giải bóng chuyền vô nữ Vô địch thế giới 2022 khiến những bảng đấu tử thần xuất hiện, qua đó hứa hẹn sự hấp dẫn của giải đấu.</div>
+                        
+                    </a>
+                </article >
+                <article class="box-readmore" >
+                    <img class="img-readmore img-rounded" src="../data/bongchuyen12.jpg" alt="bong chuyen 12">
+                    <a href="" target="_blank" class="link-readmore">
+                        
+                        <div class="tittle-readmore">Bảng thành tích đồ sộ của chuyền hai hoa khôi Nguyễn Linh Chi</div>
+                        <div class="content-readmore">Trong suốt quá trình gần hai thập kỷ thi đấu bóng chuyền, chuyền hai Linh Chi là một trong số ít cầu thủ sở hữu kho báu thành tích khủng nhất nhì làng bóng chuyền.</div>
+                       
+                    </a>
+                </article >
+                <article class="box-readmore" >
+                    <img class="img-readmore img-rounded" src="../data/bongchuyen13.jpg" alt="bong chuyen 13">
+                    <a href="" target="_blank" class="link-readmore">
+                        
+                        <div class="tittle-readmore">Bóng chuyền Indonesia đặt mục tiêu 1 HCV và 1 HCB tại SEA Games 31</div>
+                        <div class="content-readmore">Tại SEA Games 31 lần này, bóng chuyền Indonesia đã đặt mục tiêu bảo vệ tấm HCV của nội dung nam và quyết tâm giành HCB ở nội dung nữ.</div>
+                       
+                    </a>
+                </article >
+                <article class="box-readmore" >
+                    <img class="img-readmore img-rounded" src="../data/bongchuyen14.jpg" alt="bong chuyen 14">
+                    <a href="" target="_blank" class="link-readmore">
+                        
+                        <div class="tittle-readmore">Liên đoàn bóng chuyền Nga đáp trả FIVB</div>
+                        <div class="content-readmore">Sau khi đón nhận án phạt cấm tham gia các sự kiện, giải đấu quốc tế, Liên đoàn bóng chuyền Nga đã lên tiếng, bày tỏ sự không đồng tình về quyết định của FIVB.</div>
+                        
+                    </a>
+                </article >             
+            </div>  
+            <!-- Pagination -->
+            <nav class="text-center" aria-label="...">
+                <ul class="pagination">
+                    <li class="page-item">
+                        <a id="morenew" class="page-link" style="cursor: pointer;" >Thêm nữa</a>
+                    </li>
+                </ul>
+            </nav>   
+        </div>
+    
+        
+        <!-- footer -->
+        <footer class="bg-primary" style="padding: 10px;">
+            <div class="col text-center listlink-footer">
+                <ul>
+                    <li>
+                        <a class="link-footer" href="../html/home.html">Trang Chủ</a>
+                    </li>
+                    <li>
+                        <a class="link-footer" href="../html/dieukhoan.html">Điều Khoản</a>
+                    </li>
+                    <li>
+                        <a class="link-footer" href="../html/gioithieu.html">Giới Thiệu</a>
+                    </li>
+                    <li>
+                        <a class="link-footer" href="../html/datbao.html">Đặt Báo</a>
+                    </li>
+                    <li>
+                        <a class="link-footer" href="../html/sitemap.html">Sitemap</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="text-center text-rgb-animation">Bản quyền © Penguins 2022<br><br></div>
+        </footer>
+    </div>
+
+    
+    
+    <!-- Modal IMG -->
+    <div class="modal fade modal-dialog-centered" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">              
+            <div class="modal-body">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+              <img src="" class="imagepreview" style="width: 100%;" >
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <!-- Modal SearchBox -->
+    <div class="modal fade modal-dialog-centered" id="modal-searchbox" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div style="text-align: center; font-weight: bold;">Tìm Kiếm</div>
+                </div>
+                <div class="modal-body">
+                    <div class="row-md-4 d-flex justify-content-center">
+                        <input type="text" name="search" id="input-searchbox" placeholder="Nhập tiêu đề bài viết" class="form-control">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <ul class="list-group" id="result-searchbox"></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal Login -->
+    <div class="modal fade modal-dialog-centered" id="modal-login" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="text-rgb-animation" style="text-align: center; font-size: 25px; font-weight: bold;">Đăng nhập</div>
+                </div>
+                <div class="modal-body">
+                    <div class="row-md-4" >
+                        <input class="form-control" type="text" id="username" placeholder="Tài khoản" style="margin-top: 10px;">
+                        <span id="errusername" class="text-danger">(*)</span>
+                        <input  class="form-control" type="text" id="password" placeholder="Mật khẩu" style="margin-top: 10px;">
+                        <span id="errpassword" class="text-danger">(*)</span>
+                        <div class="text-center" style="margin-top: 10px;">
+                            <button class="btn btn-success" type="button" id="login">Đăng nhập</button>
+                            <button class="btn btn-success" type="button" id="regis">Đăng kí</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <span class="list-group" id="result-login"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal thong bao -->
+    <div class="modal fade modal-dialog-centered" id="modal-notification" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-md">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div style="text-align: center; font-weight: bold;">Đăng nhập</div>
+                </div>
+                <div class="modal-body">
+                    <div class="row-md-4">
+                        <div id="text-notification" class="text-center text-rgb-animation" style="font-size: 30px; font-weight: bold;"></div>
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
