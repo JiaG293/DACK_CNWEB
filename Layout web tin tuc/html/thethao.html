@@ -12,7 +12,965 @@
     <script src="../js/menusticky.js"></script>
     <script src="../js/imgmodal.js"></script>
     <script src="../js/boxcomment.js"></script>
+    <script src="../js/searchmodal.js"></script><!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="../js/datapagination.js"></script>
+    <script src="../js/menusticky.js"></script>
+    <script src="../js/imgmodal.js"></script>
+    <script src="../js/boxcomment.js"></script>
     <script src="../js/searchmodal.js"></script>
+    <link rel="stylesheet" href="../css/menusticky.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/category.css">
+    <script src="../js/pagination.js"></script>
+    <script src="../db/account.js"></script>
+    <script src="../js/login.js"></script>
+
+    <title>Thể thao</title>
+</head>
+
+<body>
+    <div class="container d-flex flex-column" style="min-height: 100vh;">
+        <div id="banner" class="row-lg-8">
+            <div id="logo" class="col-md-4">
+                <a href="../html/home.html">
+                    <img src="../data/logo-iuh.png" alt="logo">
+                </a>
+            </div>
+            <div id="tool">
+                <div id="banner-tools" class="col-md-4">
+                    <img src="../data/example-slide-2.jpg" height="150px" width="350px" alt="slide">
+                </div>
+                <div id="tool" class="col-md-4 text-right">
+                    <p class="text-rgb-animation">Hotline: 0912345678&nbsp;
+                        <button id="button-login" class="btn-primary text-rgb-animation">Đăng nhập <br> Đăng kí</button>
+                    </p>
+                    <!-- <div class="row">
+                        <button type="button" class="btn btn-success" id="button-searchbox">Tìm kiếm</button>
+                    </div> -->
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- menu dinh tren -->
+        <div id="menusticky" class="row">
+            <ul class="nav navbar-nav">
+                <li class="bg-info">
+                    <a class="link-menu" href="../html/home.html">Trang chủ</a>
+                </li>
+                <li class="bg-info dropdown">
+                    <a class="link-menu dropdown-toggle" href="../html/thoisu.html">Thời sự</a>
+                    <ul id="dropdown-bg" class="dropdown-menu">
+                        <li>
+                            <a id="link-dropdown" href="../html/thoisuvietnam.html">Việt Nam</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/thoisuquocte.html">Quốc tế</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/phongsudieutra.html">Phóng sự điều tra</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/covid19.html">Covid-19</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/chongtingia.html">Chống tin giả</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="bg-info dropdown">
+                    <a class="link-menu dropdown-toggle" href="../html/kinhte.html">Kinh tế</a>
+                    <ul id="dropdown-bg" class="dropdown-menu">
+                        <li>
+                            <a id="link-dropdown" href="../html/kinhtexanh.html">Kinh tế xanh</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/chungkhoan.html">Chứng khoán</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/doanhnghiep.html">Doanh nghiệp</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/tieudung.html">Tiêu dùng</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="bg-info dropdown">
+                    <a class="link-menu dropdown-toggle" href="../html/doisong.html">Đời sống</a>
+                    <ul id="dropdown-bg" class="dropdown-menu">
+                        <li>
+                            <a id="link-dropdown" href="../html/giadinh.html">Gia đình</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/amthuc.html">Ẩm thực</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/dulich.html">Du lịch</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/congdong.html">Cộng đồng</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/tinhyeuhonnhan.html">Tình yêu-hôn nhân</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="bg-info dropdown">
+                    <a class="link-menu dropdown-toggle" href="../html/congnghe.html">Công nghệ</a>
+                    <ul id="dropdown-bg" class="dropdown-menu">
+                        <li>
+                            <a id="link-dropdown" href="../html/sanphammoi.html">Sản phẩm mới</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/thuthuatmeohay.html">Thủ thuật-mẹo hay</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/congnghe24h.html">Công nghệ 24h</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/reviewsanpham.html">Review sản phẩm</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/xuhuong.html">Xu hướng</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/phanmem.html">Phần mềm</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/phancung.html">Phần cứng</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="bg-info dropdown">
+                    <a class="link-menu dropdown-toggle" href="../html/phapluat.html">Pháp luật</a>
+                    <ul id="dropdown-bg" class="dropdown-menu">
+                        <li>
+                            <a id="link-dropdown" href="../html/anninhtrattu.html">An ninh-trật tự</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/hinhsudansu.html">Hình sự-dân sự</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="bg-info dropdown">
+                    <a class="link-menu dropdown-toggle" href="../html/giaoduc.html">Giáo dục</a>
+                    <ul id="dropdown-bg" class="dropdown-menu">
+                        <li>
+                            <a id="link-dropdown" href="../html/tuyensinh.html">Tuyển sinh</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/duhoc.html">Du học</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/tuvanchonnghe.html">Tư vấn chọn nghề</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/tracuudiem.html">Tra cứu điểm</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="bg-info dropdown">
+                    <a class="link-menu dropdown-toggle" href="../html/suckhoe.html">Sức khỏe</a>
+                    <ul id="dropdown-bg" class="dropdown-menu">
+                        <li>
+                            <a id="link-dropdown" href="../html/lamdep.html">Làm đẹp</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/khoedepmoingay.html">Khỏe đẹp mỗi ngày</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/bacsionline.html">Bác sĩ online</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="bg-info dropdown">
+                    <a class="link-menu dropdown-toggle" href="../html/giaitri.html">Giải trí</a>
+                    <ul id="dropdown-bg" class="dropdown-menu">
+                        <li>
+                            <a id="link-dropdown" href="../html/phimdienanh.html">Phim điện ảnh</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/truyenhinh.html">Truyền hình</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/amnhac.html">Âm nhạc</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/showbiz.html">Showbiz</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="bg-info dropdown">
+                    <a class="link-menu dropdown-toggle" href="../html/thethao.html">Thể thao</a>
+                    <ul id="dropdown-bg" class="dropdown-menu">
+                        <li>
+                            <a id="link-dropdown" href="../html/bongdavietnam.html">Bóng đá Việt Nam</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/bongdaquocte.html">Bóng đá quốc tế</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/bongro.html">Bóng rổ</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/bongchuyen.html">Bóng chuyền</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/bongbauduc.html">Bóng bầu dục</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="bongban.html">Bóng bàn</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/quanvot.html">Quần vợt</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/ketquatrandau.html">Kết quả trận đấu</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/seagames.html">SEA games</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/tinchuyennhuong.html">Tin chuyển nhượng</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="bg-info dropdown">
+                    <a class="link-menu dropdown-toggle" href="../html/kinhdoanh.html">Kinh doanh</a>
+                    <ul id="dropdown-bg" class="dropdown-menu">
+                        <li>
+                            <a id="link-dropdown" href="../html/lamgiau.html">Làm giàu</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/doanhnhan.html">Doanh nhân</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="bitcoinnft.html">Bitcoin-NFT</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="bg-info dropdown">
+                    <a class="link-menu dropdown-toggle" href="../html/bandoc.html">Bạn đọc</a>
+                    <ul id="dropdown-bg" class="dropdown-menu">
+                        <li>
+                            <a id="link-dropdown" href="../html/hoidap.html">Hỏi đáp</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/tamlongvang.html">Tấm lòng vàng</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/thaoluanvande.html">Thảo luận vấn đề</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="bg-info">
+                    <button class="button-menu bg-info text-info" id="button-searchbox">Tìm kiếm 
+                        <img src="../data/search-24.png" alt="search" style="width: 20px;">
+                    </button>
+                </li>
+            </ul>
+        </div>
+        <br>
+        <div id="path" class="row-lg-12">
+            <!-- OLD -->
+            <!-- <ul class="nav navbar-nav"> 
+                <li class="nav-item">
+                    <a href="" class="nav-link">
+                        <img src="../data/home-24.png" alt="home">
+                        <img src="../data/arrow-24.png" alt="arrow">
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="" class="nav-link">
+                        <span class="text-success">Thời sự</span>
+                        <img src="../data/arrow-24.png" alt="arrow">
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="" class="nav-link">
+                        <span class="text-success">Trong nước</span>
+                        <img src="../data/arrow-24.png" alt="arrow">
+                    </a>
+                </li>
+            </ul> -->
+
+
+            <!-- NEW-->
+            <br>
+            <nav id="nav-category" class="navbar-nav row-lg-12" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item">
+                        <a href="../html/home.html">
+                            <img src="../data/home-24.png" alt="trang chu">
+                        </a>
+                    </li>
+                    <li class="breadcrumb-item">
+                        <a href="../html/thethao.html">Thể thao</a>
+                    </li>
+                </ol>
+            </nav>
+
+            <!-- Menu tab -->
+
+
+            <!-- noi dung -->
+
+            <div id="main" class="row table-bordered">
+                <!-- The thao bong da viet nam -->
+                <div class="col-md-12">
+                    <h3>
+                        <img src="../data/bx-category.svg" alt="chi muc">
+                        <a class="link-category" href="../html/bongdavietnam.html">Bóng đá Việt Nam</a>
+                    </h3>
+                </div>
+                <div class="col-md-12 thoisu-flexbox">
+                    <a href="" class="link-card">
+                        <div class="card mb-3 card-box img-rounded">
+                            <img class="card-img-top img-rounded" src="../data/thethao1.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title" style="font-size: large;">SEA Games 31 cho phép thay thế 15 cầu thủ</h5>
+                                <dd class="card-text"><small class="text-muted">25/4/2022 | 12:18</small></dd>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="" class="link-card">
+                        <div class="card mb-3 card-box img-rounded">
+                            <img class="card-img-top img-rounded" src="../data/thethao2.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title" style="font-size: large;">HLV Park: 'Việt Nam phải tiến xa hơn sau khi hoà Nhật Bản'</h5>
+                                <dd class="card-text"><small class="text-muted">29/3/2022 | 19:28</small></dd>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="" class="link-card">
+                        <div class="card mb-3 card-box img-rounded">
+                            <img class="card-img-top img-rounded" src="../data/thethao3.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title" style="font-size: large;">HAGL và bản ngã tìm thấy ở AFC Champions League</h5>
+                                <dd class="card-text"><small class="text-muted">26/4/2022 | 14:52</small></dd>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="" class="link-card">
+                        <div class="card mb-3 card-box img-rounded">
+                            <img class="card-img-top img-rounded" src="../data/thethao4.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title" style="font-size: large;">Công bố trang phục đoàn thể thao Việt Nam tại SEA Games 31</h5>
+                                <dd class="card-text"><small class="text-muted">27/4/2022 | 12:00</small></dd>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="" class="link-card">
+                        <div class="card mb-3 card-box img-rounded">
+                            <img class="card-img-top img-rounded" src="../data/thethao5.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title" style="font-size: large;">HLV Park tiếp tục bổ sung cầu thủ cho SEA Games 31</h5>
+                                <dd class="card-text"><small class="text-muted"> 26/4/2022 | 19:44</small></dd>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="" class="link-card">
+                        <div class="card mb-3 card-box img-rounded">
+                            <img class="card-img-top img-rounded" src="../data/thethao6.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title" style="font-size: large;">U23 Việt Nam hoà U20 Hàn Quốc</h5>
+                                <dd class="card-text"><small class="text-muted">19/4/2022 | 18:00</small></dd>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="" class="link-card">
+                        <div class="card mb-3 card-box img-rounded">
+                            <img class="card-img-top img-rounded" src="../data/thethao7.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title" style="font-size: large;">Vé xem U23 Việt Nam đắt nhất là 500.000 đồng</h5>
+                                <dd class="card-text"><small class="text-muted">21/4/2022 | 15:40</small></dd>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="" class="link-card">
+                        <div class="card mb-3 card-box img-rounded">
+                            <img class="card-img-top img-rounded" src="../data/thethao8.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title" style="font-size: large;">Nhật xuất bản truyện tranh đầu tiên về bóng đá Việt Nam</h5>
+                                <dd class="card-text"><small class="text-muted">30/3/2022 | 13:56</small></dd>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- The thao bong da quoc te -->
+                <div class="col-md-12">
+                    <h3>
+                        <img src="../data/bx-category.svg" alt="chi muc">
+                        <a class="link-category" href="../html/bongdaquocte.html">Bóng đá quốc tế</a>
+                    </h3>
+                </div>
+                <div class="col-md-12 thoisu-flexbox">
+                    <a href="" class="link-card">
+                        <div class="card mb-3 card-box img-rounded">
+                            <img class="card-img-top img-rounded" src="../data/thethao9.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title" style="font-size: large;">Ventura: 'Tôi bị ném đá, còn Mancini được ủng hộ'</h5>
+                                <dd class="card-text"><small class="text-muted">31/3/2022 | 07:32</small></dd>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="" class="link-card">
+                        <div class="card mb-3 card-box img-rounded">
+                            <img class="card-img-top img-rounded" src="../data/thethao10.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title" style="font-size: large;">Man City đòi lại ngôi đầu Ngoại hạng Anh</h5>
+                                <dd class="card-text"><small class="text-muted">2/4/2022 | 22:54</small></dd>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="" class="link-card">
+                        <div class="card mb-3 card-box img-rounded">
+                            <img class="card-img-top img-rounded" src="../data/thethao11.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title" style="font-size: large;">Mbappe từ chối lời mời của ông chủ PSG</h5>
+                                <dd class="card-text"><small class="text-muted"> 31/3/2022 | 14:47</small></dd>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="" class="link-card">
+                        <div class="card mb-3 card-box img-rounded">
+                            <img class="card-img-top img-rounded" src="../data/thethao12.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title" style="font-size: large;">Hà Lan cắt đứt mạch thắng của Đức</h5>
+                                <dd class="card-text"><small class="text-muted">30/3/2022 | 06:40</small></dd>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="" class="link-card">
+                        <div class="card mb-3 card-box img-rounded">
+                            <img class="card-img-top img-rounded" src="../data/thethao13.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title" style="font-size: large;">Dàn ngôi sao vắng mặt tại World Cup 2022</h5>
+                                <dd class="card-text"><small class="text-muted">Last updated 3 mins ago</small></dd>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="" class="link-card">
+                        <div class="card mb-3 card-box img-rounded">
+                            <img class="card-img-top img-rounded" src="../data/thethao14.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title" style="font-size: large;">Liên đoàn Bóng đá Nga kiện FIFA và UEFA</h5>
+                                <dd class="card-text"><small class="text-muted">4/3/2022 | 07:49</small></dd>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="" class="link-card">
+                        <div class="card mb-3 card-box img-rounded">
+                            <img class="card-img-top img-rounded" src="../data/thethao15.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title" style="font-size: large;">Abramovich - ông chủ trong mơ của thế giới bóng đá</h5>
+                                <dd class="card-text"><small class="text-muted">3/3/2022 | 12:28</small></dd>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="" class="link-card">
+                        <div class="card mb-3 card-box img-rounded">
+                            <img class="card-img-top img-rounded" src="../data/thethao16.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title" style="font-size: large;">FIFA không loại Nga khỏi World Cup 2022</h5>
+                                <dd class="card-text"><small class="text-muted">28/2/2022 | 08:21</small></dd>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- The thao bong ro -->
+                <div class="col-md-12">
+                    <h3>
+                        <img src="../data/bx-category.svg" alt="chi muc">
+                        <a class="link-category" href="../html/bongro.html">Bóng rổ</a>
+                    </h3>
+                </div>
+                <div class="col-md-12 thoisu-flexbox">
+                    <a href="" class="link-card">
+                        <div class="card mb-3 card-box img-rounded">
+                            <img class="card-img-top img-rounded" src="../data/thethao17.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title" style="font-size: large;">Mỹ tiếp tục thống trị bóng rổ nam Olympic</h5>
+                                <dd class="card-text"><small class="text-muted">8/8/2021 | 00:00</small></dd>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="" class="link-card">
+                        <div class="card mb-3 card-box img-rounded">
+                            <img class="card-img-top img-rounded" src="../data/thethao18.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title" style="font-size: large;">Bài học không đầu hàng của Michael Jordan</h5>
+                                <dd class="card-text"><small class="text-muted">7/9/2021 | 05:00</small></dd>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="" class="link-card">
+                        <div class="card mb-3 card-box img-rounded">
+                            <img class="card-img-top img-rounded" src="../data/thethao20.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title" style="font-size: large;">Golden State Warriors thua trận khai mạc NBA</h5>
+                                <dd class="card-text"><small class="text-muted">23/12/2020 | 14:23</small></dd>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="" class="link-card">
+                        <div class="card mb-3 card-box img-rounded">
+                            <img class="card-img-top img-rounded" src="../data/thethao19.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title" style="font-size: large;">Tissot là đối tác của Liên đoàn bóng rổ quốc tế</h5>
+                                <dd class="card-text"><small class="text-muted">26/7/2021 | 15:15</small></dd>
+                            </div>
+                        </div>
+                    </a>
+
+                </div>
+
+                <!-- The thao bong chuyen -->
+                <div class="col-md-12">
+                    <h3>
+                        <img src="../data/bx-category.svg" alt="chi muc">
+                        <a class="link-category" href="../html/bongchuyen.html">Bóng chuyền</a>
+                    </h3>
+                </div>
+                <div class="col-md-12 thoisu-flexbox">
+                    <a href="" class="link-card">
+                        <div class="card mb-3 card-box img-rounded">
+                            <img class="card-img-top img-rounded" src="../data/thethao21.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title" style="font-size: large;">HLV Trung Quốc tiếp tục được dẫn dắt tuyển bóng chuyền Việt Nam</h5>
+                                <dd class="card-text"><small class="text-muted">6/5/2021 | 12:34</small></dd>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="" class="link-card">
+                        <div class="card mb-3 card-box img-rounded">
+                            <img class="card-img-top img-rounded" src="../data/thethao22.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title" style="font-size: large;">Bóng chuyền nữ Việt Nam đặt chỉ tiêu khiêm tốn tại VTV Cup</h5>
+                                <dd class="card-text"><small class="text-muted">31/7/2019 | 12:59 </small></dd>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="" class="link-card">
+                        <div class="card mb-3 card-box img-rounded">
+                            <img class="card-img-top img-rounded" src="../data/thethao23.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title" style="font-size: large;">CLB Mỹ vào bán kết giải bóng chuyền VTV9 - Bình Điền 2019</h5>
+                                <dd class="card-text"><small class="text-muted">17/5/2019 | 04:00 </small></dd>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="" class="link-card">
+                        <div class="card mb-3 card-box img-rounded">
+                            <img class="card-img-top img-rounded" src="../data/thethao24.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title" style="font-size: large;">Giang Tô vô địch giải bóng chuyền nữ quốc tế tại Việt Nam</h5>
+                                <dd class="card-text"><small class="text-muted"> 21/5/2018 | 06:24</small></dd>
+                            </div>
+                        </div>
+                    </a>
+
+                </div>
+
+                <!-- The thao bong bau duc -->
+                <div class="col-md-12">
+                    <h3>
+                        <img src="../data/bx-category.svg" alt="chi muc">
+                        <a class="link-category" href="../html/bongbauduc.html">Bóng bầu dục</a>
+                    </h3>
+                </div>
+                <div class="col-md-12 thoisu-flexbox">
+                    <a href="" class="link-card">
+                        <div class="card mb-3 card-box img-rounded">
+                            <img class="card-img-top img-rounded" src="../data/thethao25.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title" style="font-size: large;">Los Angeles Rams giành Super Bowl LVI</h5>
+                                <dd class="card-text"><small class="text-muted">14/2/2022 | 14:18</small></dd>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="" class="link-card">
+                        <div class="card mb-3 card-box img-rounded">
+                            <img class="card-img-top img-rounded" src="../data/thethao26.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title" style="font-size: large;">Cầu thủ đội bóng trung học Mỹ đàn guitar hát quốc ca trên sân cỏ</h5>
+                                <dd class="card-text"><small class="text-muted">28/10/2018 | 10:10</small></dd>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="" class="link-card">
+                        <div class="card mb-3 card-box img-rounded">
+                            <img class="card-img-top img-rounded" src="../data/thethao27.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title" style="font-size: large;">New England Patriots ngược dòng 25 điểm giành Super Bowl 51</h5>
+                                <dd class="card-text"><small class="text-muted">6/2/2017 | 12:04</small></dd>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="" class="link-card">
+                        <div class="card mb-3 card-box img-rounded">
+                            <img class="card-img-top img-rounded" src="../data/thethao28.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title" style="font-size: large;">Maradona ủ rũ khi Argentina tan mộng ở World Cup bóng bầu dục</h5>
+                                <dd class="card-text"><small class="text-muted">26/10/2015 | 13:46</small></dd>
+                            </div>
+                        </div>
+                    </a>
+
+
+                </div>
+
+                <!-- The thao bong ban  -->
+                <div class="col-md-12">
+                    <h3>
+                        <img src="../data/bx-category.svg" alt="chi muc">
+                        <a class="link-category" href="../html/bongban.html">Bóng bàn</a>
+                    </h3>
+                </div>
+                <div class="col-md-12 thoisu-flexbox">
+                    <a href="" class="link-card">
+                        <div class="card mb-3 card-box img-rounded">
+                            <img class="card-img-top img-rounded" src="../data/thethao29.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title" style="font-size: large;">VĐV bóng bàn một tay thắng 4-0 ở Olympic</h5>
+                                <dd class="card-text"><small class="text-muted">24/7/2021 | 15:25</small></dd>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="" class="link-card">
+                        <div class="card mb-3 card-box img-rounded">
+                            <img class="card-img-top img-rounded" src="../data/thethao30.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title" style="font-size: large;">Bé gái 5 tuổi được ví như thần đồng bóng bàn</h5>
+                                <dd class="card-text"><small class="text-muted">14/12/2019 | 16:46</small></dd>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="" class="link-card">
+                        <div class="card mb-3 card-box img-rounded">
+                            <img class="card-img-top img-rounded" src="../data/thethao31.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title" style="font-size: large;">Mã Long lần thứ ba liên tiếp vô địch bóng bàn thế giới</h5>
+                                <dd class="card-text"><small class="text-muted">29/4/2019 | 05:56</small></dd>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="" class="link-card">
+                        <div class="card mb-3 card-box img-rounded">
+                            <img class="card-img-top img-rounded" src="../data/thethao32.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title" style="font-size: large;">Nguyễn Anh Tú vào vòng đấu chính giải bóng bàn thế giới</h5>
+                                <dd class="card-text"><small class="text-muted">23/4/2019 | 14:57</small></dd>
+                            </div>
+                        </div>
+                    </a>
+
+                </div>
+                <!-- The thao quan vot -->
+                <div class="col-md-12">
+                    <h3>
+                        <img src="../data/bx-category.svg" alt="chi muc">
+                        <a class="link-category" href="../html/quanvot.html">Quần vợt</a>
+                    </h3>
+                </div>
+                <div class="col-md-12 thoisu-flexbox">
+                    <a href="" class="link-card">
+                        <div class="card mb-3 card-box img-rounded">
+                            <img class="card-img-top img-rounded" src="../data/thethao33.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title" style="font-size: large;">Federer ấn định ngày trở lại</h5>
+                                <dd class="card-text"><small class="text-muted">27/4/2022 | 10:49</small></dd>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="" class="link-card">
+                        <div class="card mb-3 card-box img-rounded">
+                            <img class="card-img-top img-rounded" src="../data/thethao34.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title" style="font-size: large;">ATP, WTA dọa không tính điểm Wimbledon</h5>
+                                <dd class="card-text"><small class="text-muted">26/4/2022 | 09:56</small></dd>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="" class="link-card">
+                        <div class="card mb-3 card-box img-rounded">
+                            <img class="card-img-top img-rounded" src="../data/thethao35.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title" style="font-size: large;">Alcaraz vô địch Barcelona Open</h5>
+                                <dd class="card-text"><small class="text-muted"> 25/4/2022 | 06:46 </small></dd>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="" class="link-card">
+                        <div class="card mb-3 card-box img-rounded">
+                            <img class="card-img-top img-rounded" src="../data/thethao36.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title" style="font-size: large;">Tsitsipas muốn đứng trên Djokovic hoặc Medvedev</h5>
+                                <dd class="card-text"><small class="text-muted">18/4/2022 | 12:39</small></dd>
+                            </div>
+                        </div>
+                    </a>
+
+                </div>
+                <!-- The thao ket qua tran dau -->
+                <div class="col-md-12">
+                    <h3>
+                        <img src="../data/bx-category.svg" alt="chi muc">
+                        <a class="link-category" href="../html/ketquatrandau.html">Kết quả trận đấu</a>
+                    </h3>
+                </div>
+                <div class="col-md-12 thoisu-flexbox">
+                    <a href="" class="link-card">
+                        <div class="card mb-3 card-box img-rounded">
+                            <img class="card-img-top img-rounded" src="../data/thethao37.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title" style="font-size: large;">Nga 3-1 Ai Cập</h5>
+                                <dd class="card-text"><small class="text-muted">20/6/2018 | 05:45</small></dd>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="" class="link-card">
+                        <div class="card mb-3 card-box img-rounded">
+                            <img class="card-img-top img-rounded" src="../data/thethao38.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title" style="font-size: large;">Buffon mắc sai lầm ngớ ngẩn</h5>
+                                <dd class="card-text"><small class="text-muted">27/4/2022 | 14:01</small></dd>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="" class="link-card">
+                        <div class="card mb-3 card-box img-rounded">
+                            <img class="card-img-top img-rounded" src="../data/thethao39.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title" style="font-size: large;">Man City hạ Real trong cơn mưa bàn thắng ở Etihad</h5>
+                                <dd class="card-text"><small class="text-muted">27/4/2022 | 03:54</small></dd>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="" class="link-card">
+                        <div class="card mb-3 card-box img-rounded">
+                            <img class="card-img-top img-rounded" src="../data/thethao40.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title" style="font-size: large;">Thất bại 0-4 xây chắc triết lý của Guardiola thế nào</h5>
+                                <dd class="card-text"><small class="text-muted">26/4/2022 | 12:28</small></dd>
+                            </div>
+                        </div>
+                    </a>
+
+                </div>
+                <!-- The thao SEA games -->
+                <div class="col-md-12">
+                    <h3>
+                        <img src="../data/bx-category.svg" alt="chi muc">
+                        <a class="link-category" href="../html/seagames.html">SEA games</a>
+                    </h3>
+                </div>
+                <div class="col-md-12 thoisu-flexbox">
+                    <a href="" class="link-card">
+                        <div class="card mb-3 card-box img-rounded">
+                            <img class="card-img-top img-rounded" src="../data/thethao41.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title" style="font-size: large;">Săn vàng SEA Games 31 môn Thể dục Dụng cụ</h5>
+                                <dd class="card-text"><small class="text-muted">26/4/2022 | 16:37</small></dd>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="" class="link-card">
+                        <div class="card mb-3 card-box img-rounded">
+                            <img class="card-img-top img-rounded" src="../data/thethao42.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title" style="font-size: large;">HLV Park bổ sung gấp hai cầu thủ cho SEA Games 31</h5>
+                                <dd class="card-text"><small class="text-muted">25/4/2022 | 19:40</small></dd>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="" class="link-card">
+                        <div class="card mb-3 card-box img-rounded">
+                            <img class="card-img-top img-rounded" src="../data/thethao43.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title" style="font-size: large;">Đèn liên tục gặp sự cố ở sân bóng SEA Games</h5>
+                                <dd class="card-text"><small class="text-muted">20/4/2022 | 09:33</small></dd>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="" class="link-card">
+                        <div class="card mb-3 card-box img-rounded">
+                            <img class="card-img-top img-rounded" src="../data/thethao44.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title" style="font-size: large;">HLV Park có thể xếp Nguyễn Hoàng Đức đá tiền đạo</h5>
+                                <dd class="card-text"><small class="text-muted">21/4/2022 | 12:52</small></dd>
+                            </div>
+                        </div>
+                    </a>
+
+
+                </div>
+                <!-- The thao tin chuyen nhuong -->
+                <div class="col-md-12">
+                    <h3>
+                        <img src="../data/bx-category.svg" alt="chi muc">
+                        <a class="link-category" href="../html/tinchuyennhuong.html">Tin chuyển nhượng</a>
+                    </h3>
+                </div>
+                <div class="col-md-12 thoisu-flexbox">
+                    <a href="" class="link-card">
+                        <div class="card mb-3 card-box img-rounded">
+                            <img class="card-img-top img-rounded" src="../data/thethao45.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title" style="font-size: large;">Trung vệ Thành Chung có thể rời Hà Nội FC</h5>
+                                <dd class="card-text"><small class="text-muted">8/4/2022 | 11:04</small></dd>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="" class="link-card">
+                        <div class="card mb-3 card-box img-rounded">
+                            <img class="card-img-top img-rounded" src="../data/thethao46.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title" style="font-size: large;">Thị trường chuyển nhượng diễn biến thế nào 10 năm qua</h5>
+                                <dd class="card-text"><small class="text-muted">13/9/2021 | 11:52</small></dd>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="" class="link-card">
+                        <div class="card mb-3 card-box img-rounded">
+                            <img class="card-img-top img-rounded" src="../data/thethao47.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title" style="font-size: large;">Barca tính bán De Jong, Ter Stegen</h5>
+                                <dd class="card-text"><small class="text-muted">11/12/2021 | 08:17</small></dd>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="" class="link-card">
+                        <div class="card mb-3 card-box img-rounded">
+                            <img class="card-img-top img-rounded" src="../data/thethao48.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title" style="font-size: large;">Tottenham đồng ý bán Kane cho Man City</h5>
+                                <dd class="card-text"><small class="text-muted">23/7/2021 | 17:23</small></dd>
+                            </div>
+                        </div>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+        </div>
+        <!-- footer -->
+        <footer class="bg-primary" style="padding: 10px;">
+            <div class="col text-center listlink-footer">
+                <ul>
+                    <li>
+                        <a class="link-footer" href="../html/home.html">Trang Chủ</a>
+                    </li>
+                    <li>
+                        <a class="link-footer" href="../html/dieukhoan.html">Điều Khoản</a>
+                    </li>
+                    <li>
+                        <a class="link-footer" href="../html/gioithieu.html">Giới Thiệu</a>
+                    </li>
+                    <li>
+                        <a class="link-footer" href="../html/datbao.html">Đặt Báo</a>
+                    </li>
+                    <li>
+                        <a class="link-footer" href="../html/sitemap.html">Sitemap</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="text-center text-rgb-animation">Bản quyền © Penguins 2022<br><br></div>
+        </footer>
+
+
+        <!-- Modal IMG -->
+        <div class="modal fade modal-dialog-centered" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <img src="" class="imagepreview" style="width: 100%;">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal SearchBox -->
+        <div class="modal fade modal-dialog-centered" id="modal-searchbox" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <div style="text-align: center; font-weight: bold;">Tìm Kiếm</div>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row-md-4 d-flex justify-content-center">
+                            <input type="text" name="search" id="input-searchbox" placeholder="Nhập tiêu đề bài viết" class="form-control">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <ul class="list-group" id="result-searchbox"></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Login -->
+        <div class="modal fade modal-dialog-centered" id="modal-login" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <div class="text-rgb-animation" style="text-align: center; font-size: 25px; font-weight: bold;">Đăng nhập</div>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row-md-4">
+                            <input class="form-control" type="text" id="username" placeholder="Tài khoản" style="margin-top: 10px;">
+                            <span id="errusername" class="text-danger">(*)</span>
+                            <input class="form-control" type="text" id="password" placeholder="Mật khẩu" style="margin-top: 10px;">
+                            <span id="errpassword" class="text-danger">(*)</span>
+                            <div class="text-center" style="margin-top: 10px;">
+                                <button class="btn btn-success" type="button" id="login">Đăng nhập</button>
+                                <button class="btn btn-success" type="button" id="regis">Đăng kí</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <span class="list-group" id="result-login"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal thong bao -->
+        <div class="modal fade modal-dialog-centered" id="modal-notification" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-md">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <div style="text-align: center; font-weight: bold;">Đăng nhập</div>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row-md-4">
+                            <div id="text-notification" class="text-center text-rgb-animation" style="font-size: 30px; font-weight: bold;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+</body>
+
+</html>
     <link rel="stylesheet" href="../css/menusticky.css">
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/category.css">
