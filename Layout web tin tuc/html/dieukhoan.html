@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="../js/datapagination.js"></script>
+    <script src="../js/menusticky.js"></script>
+    <link rel="stylesheet" href="../css/menusticky.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <script src="../js/imgmodal.js"></script>
+    <script src="../js/boxcomment.js"></script>
+    <script src="../js/searchmodal.js"></script>
+    <script src="../js/pagination.js"></script>
+    <script src="../db/account.js"></script>
+    <script src="../js/login.js"></script>
+
+    <title>Chính sách bảo mật</title>
+</head>
+
+<body>
+    <div class="container">
+        <div id="banner" class="row-lg-8">
+            <div id="logo" class="col-md-4">
+                <a href="../html/home.html">
+                    <img src="../data/logo-iuh.png" alt="logo">
+                </a>
+            </div>
+            <div id="tool">
+                <div id="banner-tools" class="col-md-4">
+                    <img src="../data/example-slide-2.jpg" height="150px" width="350px" alt="slide">
+                </div>
+                <div id="tool" class="col-md-4 text-right">
+                    <p class="text-rgb-animation">Hotline: 0912345678&nbsp;
+                        <button id="button-login" class="btn-primary text-rgb-animation">Đăng nhập <br> Đăng kí</button>
+                    </p>
+                    <!-- <div class="row">
+                        <button type="button" class="btn btn-success" id="button-searchbox">Tìm kiếm</button>
+                    </div> -->
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- menu dinh tren -->
+        <div id="menusticky" class="row">
+            <ul class="nav navbar-nav">
+                <li class="bg-info">
+                    <a class="link-menu" href="../html/home.html">Trang chủ</a>
+                </li>
+                <li class="bg-info dropdown">
+                    <a class="link-menu dropdown-toggle" href="../html/thoisu.html">Thời sự</a>
+                    <ul id="dropdown-bg" class="dropdown-menu">
+                        <li>
+                            <a id="link-dropdown" href="../html/thoisuvietnam.html">Việt Nam</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/thoisuquocte.html">Quốc tế</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/phongsudieutra.html">Phóng sự điều tra</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/covid19.html">Covid-19</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/chongtingia.html">Chống tin giả</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="bg-info dropdown">
+                    <a class="link-menu dropdown-toggle" href="../html/kinhte.html">Kinh tế</a>
+                    <ul id="dropdown-bg" class="dropdown-menu">
+                        <li>
+                            <a id="link-dropdown" href="../html/kinhtexanh.html">Kinh tế xanh</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/chungkhoan.html">Chứng khoán</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/doanhnghiep.html">Doanh nghiệp</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/tieudung.html">Tiêu dùng</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="bg-info dropdown">
+                    <a class="link-menu dropdown-toggle" href="../html/doisong.html">Đời sống</a>
+                    <ul id="dropdown-bg" class="dropdown-menu">
+                        <li>
+                            <a id="link-dropdown" href="../html/giadinh.html">Gia đình</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/amthuc.html">Ẩm thực</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/dulich.html">Du lịch</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/congdong.html">Cộng đồng</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/tinhyeuhonnhan.html">Tình yêu-hôn nhân</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="bg-info dropdown">
+                    <a class="link-menu dropdown-toggle" href="../html/congnghe.html">Công nghệ</a>
+                    <ul id="dropdown-bg" class="dropdown-menu">
+                        <li>
+                            <a id="link-dropdown" href="../html/sanphammoi.html">Sản phẩm mới</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/thuthuatmeohay.html">Thủ thuật-mẹo hay</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/congnghe24h.html">Công nghệ 24h</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/reviewsanpham.html">Review sản phẩm</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/xuhuong.html">Xu hướng</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/phanmem.html">Phần mềm</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/phancung.html">Phần cứng</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="bg-info dropdown">
+                    <a class="link-menu dropdown-toggle" href="../html/phapluat.html">Pháp luật</a>
+                    <ul id="dropdown-bg" class="dropdown-menu">
+                        <li>
+                            <a id="link-dropdown" href="../html/anninhtrattu.html">An ninh-trật tự</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/hinhsudansu.html">Hình sự-dân sự</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="bg-info dropdown">
+                    <a class="link-menu dropdown-toggle" href="../html/giaoduc.html">Giáo dục</a>
+                    <ul id="dropdown-bg" class="dropdown-menu">
+                        <li>
+                            <a id="link-dropdown" href="../html/tuyensinh.html">Tuyển sinh</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/duhoc.html">Du học</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/tuvanchonnghe.html">Tư vấn chọn nghề</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/tracuudiem.html">Tra cứu điểm</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="bg-info dropdown">
+                    <a class="link-menu dropdown-toggle" href="../html/suckhoe.html">Sức khỏe</a>
+                    <ul id="dropdown-bg" class="dropdown-menu">
+                        <li>
+                            <a id="link-dropdown" href="../html/lamdep.html">Làm đẹp</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/khoedepmoingay.html">Khỏe đẹp mỗi ngày</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/bacsionline.html">Bác sĩ online</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="bg-info dropdown">
+                    <a class="link-menu dropdown-toggle" href="../html/giaitri.html">Giải trí</a>
+                    <ul id="dropdown-bg" class="dropdown-menu">
+                        <li>
+                            <a id="link-dropdown" href="../html/phimdienanh.html">Phim điện ảnh</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/truyenhinh.html">Truyền hình</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/amnhac.html">Âm nhạc</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/showbiz.html">Showbiz</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="bg-info dropdown">
+                    <a class="link-menu dropdown-toggle" href="../html/thethao.html">Thể thao</a>
+                    <ul id="dropdown-bg" class="dropdown-menu">
+                        <li>
+                            <a id="link-dropdown" href="../html/bongdavietnam.html">Bóng đá Việt Nam</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/bongdaquocte.html">Bóng đá quốc tế</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/bongro.html">Bóng rổ</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/bongchuyen.html">Bóng chuyền</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/bongbauduc.html">Bóng bầu dục</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="bongban.html">Bóng bàn</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/quanvot.html">Quần vợt</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/ketquatrandau.html">Kết quả trận đấu</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/seagames.html">SEA games</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/tinchuyennhuong.html">Tin chuyển nhượng</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="bg-info dropdown">
+                    <a class="link-menu dropdown-toggle" href="../html/kinhdoanh.html">Kinh doanh</a>
+                    <ul id="dropdown-bg" class="dropdown-menu">
+                        <li>
+                            <a id="link-dropdown" href="../html/lamgiau.html">Làm giàu</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/doanhnhan.html">Doanh nhân</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="bitcoinnft.html">Bitcoin-NFT</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="bg-info dropdown">
+                    <a class="link-menu dropdown-toggle" href="../html/bandoc.html">Bạn đọc</a>
+                    <ul id="dropdown-bg" class="dropdown-menu">
+                        <li>
+                            <a id="link-dropdown" href="../html/hoidap.html">Hỏi đáp</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/tamlongvang.html">Tấm lòng vàng</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/thaoluanvande.html">Thảo luận vấn đề</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="bg-info">
+                    <button class="button-menu bg-info text-info" id="button-searchbox">Tìm kiếm 
+                        <img src="../data/search-24.png" alt="search" style="width: 20px;">
+                    </button>
+                </li>
+            </ul>
+        </div>
+        <br>
+        <div id="path" class="row-lg-12">
+            <!-- OLD -->
+            <!-- <ul class="nav navbar-nav"> 
+                <li class="nav-item">
+                    <a href="" class="nav-link">
+                        <img src="../data/home-24.png" alt="home">
+                        <img src="../data/arrow-24.png" alt="arrow">
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="" class="nav-link">
+                        <span class="text-success">Thời sự</span>
+                        <img src="../data/arrow-24.png" alt="arrow">
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="" class="nav-link">
+                        <span class="text-success">Trong nước</span>
+                        <img src="../data/arrow-24.png" alt="arrow">
+                    </a>
+                </li>
+            </ul> -->
+
+
+            <!-- NEW-->
+            <br>
+            <nav id="nav-category" class="navbar-nav row-lg-12" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item">
+                        <a href="../html/home.html">
+                            <img src="../data/home-24.png" alt="trang chu">
+                        </a>
+                    </li>
+                    <li class="breadcrumb-item">
+                        <a href="../html/thoisu.html">Điều khoản</a>
+                    </li>
+                    <li class="breadcrumb-item">
+                        <a href="../html/thoisuvietnam.html">Chính sách</a>
+                    </li>
+                    <li class="breadcrumb-item active nav-item" aria-current="page">
+                        <a class="nav-link" href="../html/baiviet20.html">Chính sách bảo mật</a>
+                    </li>
+                </ol>
+            </nav>
+
+            <!-- Menu tab -->
+
+
+            <!-- noi dung -->
+
+            <div id="main" class="row table-bordered">
+                <div id="tittle" class="col-md-12">
+                    <span class="main-tittle-content row">Chính sách bảo mật</span>
+                </div>
+                <div id="content" class="col-md-12">
+                    <div class="col-md-12" id="addcontent">
+                        <dd>Chính sách bảo mật này giải thích cách chúng tôi thu thập, sử dụng, chia sẻ dữ liệu cá nhân của bạn khi bạn sử dụng các dịch vụ được cung cấp trên các trang web và ứng dụng của chúng tôi hoặc tương tác với chúng tôi.</dd><br>
+
+                        <br>
+                        <dd>Dữ liệu cá nhân là bất kỳ thông tin nào về bạn mà bạn có thể được nhận dạng hoặc có thể nhận dạng được. Điều này có thể bao gồm các thông tin như:
+                            <ul>
+                                <li>Tên, ngày sinh, địa chỉ email, địa chỉ bưu điện, số điện thoại, số điện thoại di động, chi tiết tài chính, chẳng hạn như thẻ thanh toán mà bạn sử dụng để mua sản phẩm…</li>
+                                <li>Thông tin về thiết bị của bạn (chẳng hạn như địa chỉ IP, là mã số để xác định thiết bị của bạn có thể cung cấp thông tin về quốc gia, khu vực hoặc thành phố nơi bạn ở)
+                                </li>
+                                <li>Thông tin liên quan đến cách bạn sử dụng và tương tác với các trang web, ứng dụng và dịch vụ của chúng tôi.</li>
+                            </ul>
+                        </dd>
+
+                        <br>
+
+                        <dd>Đôi khi các trang web và ứng dụng của chúng tôi có thể chứa các liên kết đến các trang web và dịch vụ không thuộc nhóm dịch vụ của báo Thanh Niên. Các trang web và dịch vụ này có chính sách bảo mật của riêng họ. Nếu bạn nhấp vào
+                            liên kết đến các trang web và ứng dụng không phải của báo Thanh Niên, bạn nên đọc chính sách bảo mật được hiển thị trên trang web của họ.</dd>
+                        <br>
+
+                        <h3><b>Chúng tôi là ai và cách liên hệ với chúng tôi:</b></h3>
+                        <br>
+
+
+                        <dd>Báo Lá Cải, TP HCM là đơn vị kiểm soát dữ liệu liên quan đến dữ liệu cá nhân của bạn. Điều này có nghĩa là chúng tôi chịu trách nhiệm quyết định cách thức và lý do chúng tôi giữ và sử dụng dữ liệu cá nhân của bạn. Nếu bạn muốn
+                            liên hệ trực tiếp với chúng tôi.</dd>
+                        <br>
+
+                        <h3><b>Các loại dữ liệu cá nhân chúng tôi thu thập về bạn:</b></h3>
+                        <br>
+
+
+                        <dd>Chúng tôi thu thập dữ liệu cá nhân của bạn khi bạn truy cập các trang web và ứng dụng của chúng tôi, đăng ký sản phẩm hoặc dịch vụ, đóng góp cho báo Thanh Niên hoặc khi bạn tương tác với chúng tôi. Chúng tôi sẽ chỉ thu thập dữ
+                            liệu cá nhân của bạn theo luật hiện hành. Chúng tôi thu thập dữ liệu cá nhân của bạn theo nhiều cách khác nhau:
+                            <ul>
+                                <li>Trực tiếp từ bạn, khi bạn đăng ký dịch vụ của chúng tôi và khi bạn duyệt các trang web của chúng tôi hoặc sử dụng các ứng dụng của chúng tôi</li>
+                                <li>Dữ liệu cá nhân chúng tôi tạo ra về bạn, ví dụ: dữ liệu cá nhân mà chúng tôi sử dụng để xác thực bạn hoặc dữ liệu cá nhân ở dạng địa chỉ IP của bạn hoặc tùy chọn của bạn</li>
+                                <li>Dữ liệu cá nhân mà chúng tôi thu thập từ các bên thứ ba, ví dụ: dữ liệu cá nhân giúp chúng tôi chống gian lận hoặc chúng tôi thu thập, với sự cho phép của bạn, khi bạn tương tác với các tài khoản mạng xã hội của mình</li>
+                            </ul>
+                        </dd>
+                        <br>
+
+                        <dd>Khi bạn đăng ký tài khoản báo Lá Cải, chúng tôi thu thập:
+                            <ul>
+                                <li>Tên của bạn</li>
+                                <li>Địa chỉ email của bạn</li>
+                                <li>Các chi tiết khác như địa chỉ cư trú hoặc địa chỉ thanh toán của bạn khi bạn đăng ký thành viên hoặc đăng ký</li>
+                                <li>Một số dữ liệu hạn chế từ hồ sơ mạng xã hội của bạn, nếu bạn đã đăng nhập vào thanhnien.vn bằng cách sử dụng chi tiết mạng xã hội của mình</li>
+                                <li>Ảnh của bạn, nếu bạn thêm một bức ảnh vào trang hồ sơ của mình</li>
+                            </ul>
+                        </dd>
+                        <br>
+
+                        <dd>Bạn có thể thay đổi hoặc xóa các chi tiết này bằng cách sử dụng chức năng cài đặt Thông tin cá nhân trong tài khoản báo Lá Cải.</dd>
+                        <br>
+
+                        <h4><b>Cookie và các công nghệ tương tự</b></h4>
+                        <br>
+
+
+                        <dd>Khi bạn truy cập các trang web của chúng tôi hoặc khi bạn sử dụng các ứng dụng của chúng tôi, chúng tôi có thể tự động thu thập dữ liệu cá nhân từ bạn bằng cách sử dụng cookie hoặc các công nghệ tương tự. Cookie là một tệp nhỏ
+                            có thể được đặt trên thiết bị của bạn cho phép chúng tôi nhận ra và ghi nhớ bạn.</dd>
+                        <br>
+
+                        <dd>Chúng tôi sử dụng cookie theo nhiều cách để cải thiện trải nghiệm của bạn trên trang web của chúng tôi, bao gồm:
+                            <ul>
+                                <li>Giữ cho bạn đăng nhập</li>
+                                <li>Hiểu cách bạn sử dụng trang web của chúng tôi</li>
+                                <li>iển thị cho bạn các nội dung có liên quan đến bạn</li>
+                            </ul>
+                        </dd>
+                        <br>
+
+                        <br><br><br>
+                    </div>
+                </div>
+            </div>
+
+            <!-- footer -->
+            <footer class="bg-primary" style="padding: 10px;">
+                <div class="col text-center listlink-footer">
+                    <ul>
+                        <li>
+                            <a class="link-footer" href="../html/home.html">Trang Chủ</a>
+                        </li>
+                        <li>
+                            <a class="link-footer" href="../html/dieukhoan.html">Điều Khoản</a>
+                        </li>
+                        <li>
+                            <a class="link-footer" href="../html/gioithieu.html">Giới Thiệu</a>
+                        </li>
+                        <li>
+                            <a class="link-footer" href="../html/datbao.html">Đặt Báo</a>
+                        </li>
+                        <li>
+                            <a class="link-footer" href="../html/sitemap.html">Sitemap</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="text-center text-rgb-animation">Bản quyền © Penguins 2022<br><br></div>
+            </footer>
+        </div>
+
+
+
+        <!-- Modal IMG -->
+        <div class="modal fade modal-dialog-centered" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <img src="" class="imagepreview" style="width: 100%;">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal SearchBox -->
+        <div class="modal fade modal-dialog-centered" id="modal-searchbox" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <div style="text-align: center; font-weight: bold;">Tìm Kiếm</div>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row-md-4 d-flex justify-content-center">
+                            <input type="text" name="search" id="input-searchbox" placeholder="Nhập tiêu đề bài viết" class="form-control">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <ul class="list-group" id="result-searchbox"></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Login -->
+        <div class="modal fade modal-dialog-centered" id="modal-login" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <div class="text-rgb-animation" style="text-align: center; font-size: 25px; font-weight: bold;">Đăng nhập</div>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row-md-4">
+                            <input class="form-control" type="text" id="username" placeholder="Tài khoản" style="margin-top: 10px;">
+                            <span id="errusername" class="text-danger">(*)</span>
+                            <input class="form-control" type="text" id="password" placeholder="Mật khẩu" style="margin-top: 10px;">
+                            <span id="errpassword" class="text-danger">(*)</span>
+                            <div class="text-center" style="margin-top: 10px;">
+                                <button class="btn btn-success" type="button" id="login">Đăng nhập</button>
+                                <button class="btn btn-success" type="button" id="regis">Đăng kí</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <span class="list-group" id="result-login"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal thong bao -->
+        <div class="modal fade modal-dialog-centered" id="modal-notification" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-md">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <div style="text-align: center; font-weight: bold;">Đăng nhập</div>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row-md-4">
+                            <div id="text-notification" class="text-center text-rgb-animation" style="font-size: 30px; font-weight: bold;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+</body>
+
+</html>
