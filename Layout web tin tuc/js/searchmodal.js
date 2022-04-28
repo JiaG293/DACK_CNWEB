@@ -3,7 +3,6 @@ $(document).ready(function(){
     {
         $("#modal-searchbox").modal();
     });
-    $.ajaxSetup({ cache: false });
     $("#input-searchbox").keyup(function(){
         $("#result-searchbox").html("");
         var searchField = $('#input-searchbox').val();
