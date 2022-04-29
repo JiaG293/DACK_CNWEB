@@ -1,0 +1,51 @@
+/* Sitemap */
+#sitemap-pp
+{
+    margin-left: 450px;
+}
+/* tieu de chi muc */
+#category-sitemap
+{
+    text-align: right;
+    font-size: large;
+    font-weight: bold;
+    border-radius: 5px;
+    color: #337ab7;
+    background-color: #d9edf7;
+    margin: 10px;
+}
+#category-sitemap:hover
+{
+    color: red;
+}
+/* tieu de chi muc con */
+#tittle-category
+{
+    margin-left: 20px;
+    font-size: large;
+    font-weight: bold;
+}
+/* link chi muc con */
+#link-category-sitemap
+{
+    margin-left: 30px;
+    text-decoration: none;
+    transition: .35s linear;
+}
+#link-category-sitemap:hover
+{
+    color: red;
+}
+
+#detail-category
+{
+    width: 200px;
+    color: #337ab7;
+    transition: .35s linear;
+    
+}
+#detail-category:hover
+{
+    color: red;
+    transform: scale(1.1);
+}
