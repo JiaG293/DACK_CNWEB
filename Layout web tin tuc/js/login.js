@@ -53,6 +53,12 @@ $(document).ready(function(){
         var pwr = $("#password").val(); 
         anew.user = usr;
         anew.password = pwr;
+        if(checkPassword && checkUserName)
+        {
+            $("#text-notification").html("Đăng kí thất bại!!");
+            $("#modal-notification").modal();
+            return false;
+        }
         if(usr.trim()=="" || pwr.trim()=="")
         {
             $("#text-notification").html("Đăng kí thất bại!!");
@@ -85,7 +91,7 @@ $(document).ready(function(){
     {
         let usl = $("#username").val(); 
         let pwl = $("#password").val(); 
-        for(i = 0; i < 7 ; i++)
+        for(i = 0; i < account.length ; i++)
         {
             if(usl == account[i].user )
             {   
