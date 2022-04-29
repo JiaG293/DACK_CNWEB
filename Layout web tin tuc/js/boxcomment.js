@@ -6,7 +6,7 @@ $(document).ready(function() {
         let userbox = $("#tfUSER").val();
         let d = new Date();
         let year = d.getFullYear();
-        let month = d.getMonth();
+        let month = d.getMonth()+1;
         let date = d.getDate();      
         let hour = d.getHours();
         let minutes = d.getMinutes();
