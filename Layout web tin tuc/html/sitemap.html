@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="../js/datapagination.js"></script>
+    <script src="../js/menusticky.js"></script>
+    <link rel="stylesheet" href="../css/menusticky.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <script src="../js/imgmodal.js"></script>
+    <script src="../js/boxcomment.js"></script>
+    <script src="../js/searchmodal.js"></script>
+    <script src="../js/pagination.js"></script>
+    <script src="../db/account.js"></script>
+    <script src="../js/login.js"></script>
+
+    <title>Chính sách bảo mật</title>
+</head>
+
+<body>
+    <div class="container">
+        <div id="banner" class="row-lg-8">
+            <div id="logo" class="col-md-4">
+                <a href="../html/home.html">
+                    <img src="../data/logo-iuh.png" alt="logo">
+                </a>
+            </div>
+            <div id="tool">
+                <div id="banner-tools" class="col-md-4">
+                    <img src="../data/example-slide-2.jpg" height="150px" width="350px" alt="slide">
+                </div>
+                <div id="tool" class="col-md-4 text-right">
+                    <p class="text-rgb-animation">Hotline: 0912345678&nbsp;
+                        <button id="button-login" class="btn-primary text-rgb-animation">Đăng nhập <br> Đăng kí</button>
+                    </p>
+                    <!-- <div class="row">
+                        <button type="button" class="btn btn-success" id="button-searchbox">Tìm kiếm</button>
+                    </div> -->
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- menu dinh tren -->
+        <div id="menusticky" class="row">
+            <ul class="nav navbar-nav">
+                <li class="bg-info">
+                    <a class="link-menu" href="../html/home.html">Trang chủ</a>
+                </li>
+                <li class="bg-info dropdown">
+                    <a class="link-menu dropdown-toggle" href="../html/thoisu.html">Thời sự</a>
+                    <ul id="dropdown-bg" class="dropdown-menu">
+                        <li>
+                            <a id="link-dropdown" href="../html/thoisuvietnam.html">Việt Nam</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/thoisuquocte.html">Quốc tế</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/phongsudieutra.html">Phóng sự điều tra</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/covid19.html">Covid-19</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/chongtingia.html">Chống tin giả</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="bg-info dropdown">
+                    <a class="link-menu dropdown-toggle" href="../html/kinhte.html">Kinh tế</a>
+                    <ul id="dropdown-bg" class="dropdown-menu">
+                        <li>
+                            <a id="link-dropdown" href="../html/kinhtexanh.html">Kinh tế xanh</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/chungkhoan.html">Chứng khoán</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/doanhnghiep.html">Doanh nghiệp</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/tieudung.html">Tiêu dùng</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="bg-info dropdown">
+                    <a class="link-menu dropdown-toggle" href="../html/doisong.html">Đời sống</a>
+                    <ul id="dropdown-bg" class="dropdown-menu">
+                        <li>
+                            <a id="link-dropdown" href="../html/giadinh.html">Gia đình</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/amthuc.html">Ẩm thực</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/dulich.html">Du lịch</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/congdong.html">Cộng đồng</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/tinhyeuhonnhan.html">Tình yêu-hôn nhân</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="bg-info dropdown">
+                    <a class="link-menu dropdown-toggle" href="../html/congnghe.html">Công nghệ</a>
+                    <ul id="dropdown-bg" class="dropdown-menu">
+                        <li>
+                            <a id="link-dropdown" href="../html/sanphammoi.html">Sản phẩm mới</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/thuthuatmeohay.html">Thủ thuật-mẹo hay</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/congnghe24h.html">Công nghệ 24h</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/reviewsanpham.html">Review sản phẩm</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/xuhuong.html">Xu hướng</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/phanmem.html">Phần mềm</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/phancung.html">Phần cứng</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="bg-info dropdown">
+                    <a class="link-menu dropdown-toggle" href="../html/phapluat.html">Pháp luật</a>
+                    <ul id="dropdown-bg" class="dropdown-menu">
+                        <li>
+                            <a id="link-dropdown" href="../html/anninhtrattu.html">An ninh-trật tự</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/hinhsudansu.html">Hình sự-dân sự</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="bg-info dropdown">
+                    <a class="link-menu dropdown-toggle" href="../html/giaoduc.html">Giáo dục</a>
+                    <ul id="dropdown-bg" class="dropdown-menu">
+                        <li>
+                            <a id="link-dropdown" href="../html/tuyensinh.html">Tuyển sinh</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/duhoc.html">Du học</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/tuvanchonnghe.html">Tư vấn chọn nghề</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/tracuudiem.html">Tra cứu điểm</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="bg-info dropdown">
+                    <a class="link-menu dropdown-toggle" href="../html/suckhoe.html">Sức khỏe</a>
+                    <ul id="dropdown-bg" class="dropdown-menu">
+                        <li>
+                            <a id="link-dropdown" href="../html/lamdep.html">Làm đẹp</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/khoedepmoingay.html">Khỏe đẹp mỗi ngày</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/bacsionline.html">Bác sĩ online</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="bg-info dropdown">
+                    <a class="link-menu dropdown-toggle" href="../html/giaitri.html">Giải trí</a>
+                    <ul id="dropdown-bg" class="dropdown-menu">
+                        <li>
+                            <a id="link-dropdown" href="../html/phimdienanh.html">Phim điện ảnh</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/truyenhinh.html">Truyền hình</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/amnhac.html">Âm nhạc</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/showbiz.html">Showbiz</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="bg-info dropdown">
+                    <a class="link-menu dropdown-toggle" href="../html/thethao.html">Thể thao</a>
+                    <ul id="dropdown-bg" class="dropdown-menu">
+                        <li>
+                            <a id="link-dropdown" href="../html/bongdavietnam.html">Bóng đá Việt Nam</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/bongdaquocte.html">Bóng đá quốc tế</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/bongro.html">Bóng rổ</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/bongchuyen.html">Bóng chuyền</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/bongbauduc.html">Bóng bầu dục</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="bongban.html">Bóng bàn</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/quanvot.html">Quần vợt</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/ketquatrandau.html">Kết quả trận đấu</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/seagames.html">SEA games</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/tinchuyennhuong.html">Tin chuyển nhượng</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="bg-info dropdown">
+                    <a class="link-menu dropdown-toggle" href="../html/kinhdoanh.html">Kinh doanh</a>
+                    <ul id="dropdown-bg" class="dropdown-menu">
+                        <li>
+                            <a id="link-dropdown" href="../html/lamgiau.html">Làm giàu</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/doanhnhan.html">Doanh nhân</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="bitcoinnft.html">Bitcoin-NFT</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="bg-info dropdown">
+                    <a class="link-menu dropdown-toggle" href="../html/bandoc.html">Bạn đọc</a>
+                    <ul id="dropdown-bg" class="dropdown-menu">
+                        <li>
+                            <a id="link-dropdown" href="../html/hoidap.html">Hỏi đáp</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/tamlongvang.html">Tấm lòng vàng</a>
+                        </li>
+                        <li>
+                            <a id="link-dropdown" href="../html/thaoluanvande.html">Thảo luận vấn đề</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="bg-info">
+                    <button class="button-menu bg-info text-info" id="button-searchbox">Tìm kiếm 
+                        <img src="../data/search-24.png" alt="search" style="width: 20px;">
+                    </button>
+                </li>
+            </ul>
+        </div>
+        <br>
+        <div id="path" class="row-lg-12">
+            <!-- OLD -->
+            <!-- <ul class="nav navbar-nav"> 
+                <li class="nav-item">
+                    <a href="" class="nav-link">
+                        <img src="../data/home-24.png" alt="home">
+                        <img src="../data/arrow-24.png" alt="arrow">
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="" class="nav-link">
+                        <span class="text-success">Thời sự</span>
+                        <img src="../data/arrow-24.png" alt="arrow">
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="" class="nav-link">
+                        <span class="text-success">Trong nước</span>
+                        <img src="../data/arrow-24.png" alt="arrow">
+                    </a>
+                </li>
+            </ul> -->
+
+
+            <!-- NEW-->
+            <br>
+            
+
+            <!-- Menu tab -->
+
+
+            <!-- noi dung -->
+
+            <div id="main" class="row table-bordered">
+                <div id="tittle" class="col-md-12">
+                    <span class="main-tittle-content row">Sitemap</span>
+                </div>
+                <div id="content" class="col-md-12">
+                    <div class="col-md-12" id="addcontent">
+                        <details>
+                            <summary>Trang Chủ</summary>
+                            <dd><a href="../html/home.html">link</a></dd>
+                        </details>
+                        <details>
+                            <a href="../html/home.html"></a>
+                            <summary>Thời sự</summary>
+                            <dd>
+                                <details>
+                                    <a href="../html/home.html"></a>
+                                    <summary>Thời sự Việt Nam</summary>
+                                    <dd><a href="../html/thoisuvietnam.html">link</a></dd>
+                                </details>
+                                <details>
+                                    <summary>Thời sự quốc tế</summary>
+                                    <dd><a href="../html/thoisuquocte.html">link</a></dd>
+                                </details>
+                                <details>
+                                    <summary>Phóng sự điều tra</summary>
+                                    <dd><a href="../html/">link</a></dd>
+                                </details>
+                                <details>
+                                    <summary>Covid-19</summary>
+                                    <dd><a href="../html/">link</a></dd>
+                                </details>
+                                <details>
+                                    <summary>Chống tin giả</summary>
+                                    <dd><a href="../html/">link</a></dd>
+                                </details>
+                            </dd>
+                        </details>
+                    </div>
+                </div>
+            </div>
+
+            <!-- footer -->
+            <footer class="bg-primary" style="padding: 10px;">
+                <div class="col text-center listlink-footer">
+                    <ul>
+                        <li>
+                            <a class="link-footer" href="../html/home.html">Trang Chủ</a>
+                        </li>
+                        <li>
+                            <a class="link-footer" href="../html/dieukhoan.html">Điều Khoản</a>
+                        </li>
+                        <li>
+                            <a class="link-footer" href="../html/gioithieu.html">Giới Thiệu</a>
+                        </li>
+                        <li>
+                            <a class="link-footer" href="../html/datbao.html">Đặt Báo</a>
+                        </li>
+                        <li>
+                            <a class="link-footer" href="../html/sitemap.html">Sitemap</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="text-center text-rgb-animation">Bản quyền © Penguins 2022<br><br></div>
+            </footer>
+        </div>
+
+
+
+        <!-- Modal IMG -->
+        <div class="modal fade modal-dialog-centered" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <img src="" class="imagepreview" style="width: 100%;">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal SearchBox -->
+        <div class="modal fade modal-dialog-centered" id="modal-searchbox" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <div style="text-align: center; font-weight: bold;">Tìm Kiếm</div>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row-md-4 d-flex justify-content-center">
+                            <input type="text" name="search" id="input-searchbox" placeholder="Nhập tiêu đề bài viết" class="form-control">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <ul class="list-group" id="result-searchbox"></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Login -->
+        <div class="modal fade modal-dialog-centered" id="modal-login" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <div class="text-rgb-animation" style="text-align: center; font-size: 25px; font-weight: bold;">Đăng nhập</div>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row-md-4">
+                            <input class="form-control" type="text" id="username" placeholder="Tài khoản" style="margin-top: 10px;">
+                            <span id="errusername" class="text-danger">(*)</span>
+                            <input class="form-control" type="text" id="password" placeholder="Mật khẩu" style="margin-top: 10px;">
+                            <span id="errpassword" class="text-danger">(*)</span>
+                            <div class="text-center" style="margin-top: 10px;">
+                                <button class="btn btn-success" type="button" id="login">Đăng nhập</button>
+                                <button class="btn btn-success" type="button" id="regis">Đăng kí</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <span class="list-group" id="result-login"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal thong bao -->
+        <div class="modal fade modal-dialog-centered" id="modal-notification" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-md">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <div style="text-align: center; font-weight: bold;">Đăng nhập</div>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row-md-4">
+                            <div id="text-notification" class="text-center text-rgb-animation" style="font-size: 30px; font-weight: bold;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+</body>
+
+</html>

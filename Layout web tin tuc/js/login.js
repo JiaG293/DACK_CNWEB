@@ -11,14 +11,14 @@ $(document).ready(function(){
     function checkUserName()
     {
         let us = $("#username").val(); 
-        let cUN = /^[a-z0-9]{6,45}$/;
+        let cUN = /^[a-zA-Z0-9]{6,45}$/;
         if(us.trim()=="")
         {
             $("#errusername").html("Không để trống!!");
             return false;
         }
         if(!cUN.test(us)){
-            $("#errusername").html("Sai định dạng!!");
+            $("#errusername").html("Ít nhất 6 kí tự không chứa kí tự đặc biệt!!");
             return false;
         }
         
@@ -37,7 +37,7 @@ $(document).ready(function(){
             return false;
         }
         if(!cPWD.test(pwd)){
-            $("#errpassword").html("Sai định dạng!!");
+            $("#errpassword").html("Ít nhất 8 kí tự bất kì!!");
             return false;
         }
         $("#errpassword").html("(*)");
@@ -49,35 +49,29 @@ $(document).ready(function(){
     /* xac thuc dang nhap */
     function register()
     {
-        var usr = $("#username").val(); 
-        var pwr = $("#password").val(); 
+        let usr = $("#username").val(); 
+        let pwr = $("#password").val(); 
         anew.user = usr;
         anew.password = pwr;
-        if(checkPassword && checkUserName)
-        {
-            $("#text-notification").html("Đăng kí thất bại!!");
-            $("#modal-notification").modal();
-            return false;
-        }
         if(usr.trim()=="" || pwr.trim()=="")
         {
-            $("#text-notification").html("Đăng kí thất bại!!");
+            $("#text-notification").html("Đăng kí thất bại!!(Chưa điền tài khoản mật khẩu)");
             $("#modal-notification").modal();
-            return false;
+            return true;
         }
         if(usr.trim()=="" && pwr.trim()=="")
         {
-            $("#text-notification").html("Đăng kí thất bại!!");
+            $("#text-notification").html("Đăng kí thất bại!!3");
             $("#modal-notification").modal();
-            return false;
+            return true;
         }
         for(let i =0; i<account.length; i++)
         {
             if(usr == account[i].user)
             {
-                $("#text-notification").html("Đăng kí thất bại!!");
+                $("#text-notification").html("Đăng kí thất bại!!(Tài khoản đã có người dùng)");
                 $("#modal-notification").modal();
-                return false;
+                return true;  
             }
         }
         $("#text-notification").html("Đăng kí thành công!!");
@@ -86,6 +80,18 @@ $(document).ready(function(){
         return true;  
     }
     $("#regis").click(register);
+
+    /* dem nguoc thoi gian refresh trang */
+    var cd = 12; //delay hieu ung modal 1.3s -2s tuy may 
+    setInterval(function(){ 
+        if (cd <= -1) {
+            clearInterval(interval);
+        }
+        $("#countdown").html(cd);
+        cd--;
+     }, 1000);
+
+
     let i = 0
     function login()
     {
@@ -99,8 +105,12 @@ $(document).ready(function(){
                 if(pwl == account[i].password)
                 {
                     $("#modal-login").modal("hide");
-                    $("#text-notification").html("Đăng nhập thành công!!");
+                    $("#text-notification").html("Đăng nhập thành công!!<br>(tự động refresh trang sau <span id='countdown'>9</span>)");
                     $("#modal-notification").modal();
+                    $("#modal-notification").click(setTimeout(function()
+                    {
+                        window.location.reload();
+                    }, 10000));
                     break;
                 }
                 else
@@ -118,8 +128,8 @@ $(document).ready(function(){
             }
         }
     }
-    
     $("#login").click(login);
+
     $("#modal-login").modal('hide');  
 });
 
